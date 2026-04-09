@@ -1,0 +1,14 @@
+Agent: SA | Model: DEV
+===================================================================
+
+Resolved
+  easy           : ⟨L, P, (V, L)^2, V⟩ (90%)
+  medium         : ⟨L_6, P, (V, L)^2, V⟩ (91%)
+  hard           : ⟨P, V, L, (P, V)^4, P⟩ (67%)
+  very hard      : —
+
+Unresolved
+  easy           : ⟨P, (V, L)^3, V⟩ (74%)
+  medium         : ⟨(P, V)^4⟩ (74%)
+  hard           : ⟨L_3, (P, V)^4, P⟩ (74%)
+  very hard      : ⟨P_2, (V_3, L_19)^2, P, L_9, (V_4, P_2)^2, V_6, L_7, P, V_3, L, (V_3, P)^3, (V_8, L_2)^3, (P, V_3)^2, (L, P, V_9)^2, P, V_15⟩ (33%)

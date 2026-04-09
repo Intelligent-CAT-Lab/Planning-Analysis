@@ -1,0 +1,12 @@
+Found 1 files
+
+=== Per Difficulty Category ===
+                  node_count  step_count  loop_count  longest_path
+debug_difficulty                                                  
+unknown             11.83871   12.903226    1.064516     10.612903
+
+=== Overall ===
+node_count      11.838710
+step_count      12.903226
+loop_count       1.064516
+longest_path    10.612903

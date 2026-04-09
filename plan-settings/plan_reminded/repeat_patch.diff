@@ -1,0 +1,31 @@
+diff --git a/sweagent/agent/agents.py b/sweagent/agent/agents.py
+index 4844aeb7..6f913fa8 100644
+--- a/sweagent/agent/agents.py
++++ b/sweagent/agent/agents.py
+@@ -464,6 +464,7 @@ class DefaultAgent(AbstractAgent):
+         self.model = model
+         self.templates = templates
+         self.tools = tools
++        self.counter = 0
+         if isinstance(self.model, HumanThoughtModel):
+             self.tools.config.parse_function = ThoughtActionParser()
+         elif isinstance(self.model, HumanModel):
+@@ -1022,6 +1023,18 @@ class DefaultAgent(AbstractAgent):
+         # because some of the specific exception handling requires some of these
+         # attributes (e.g., if we want to requery the model for a bash syntax error, we
+         # need to have the previous model output to format the requery template)
++
++        self.counter += 1
++        PLAN = "PLAN REMINDER: 1. As a first step, it might be a good idea to find and read code relevant to the <pr_description>\n2. Create a script to reproduce the error and execute it with `python <filename.py>` using the bash tool, to confirm the error\n3. Edit the sourcecode of the repo to resolve the issue\n4. Rerun your reproduce script and confirm that the error is fixed!\n5. Think about edgecases and make sure your fix handles them as well.\n"
++        if self.counter % 5 == 0:
++            if isinstance(history[-1]['content'], list):
++                for c in history[-1]['content']:
++                    if c['type'] == 'text':
++                        c['text'] = PLAN + c['text']
++                        break
++            elif isinstance(history[-1]['content'], str):
++                history[-1]['content'] = PLAN + history[-1]['content']
++
+         step = StepOutput()
+         step.query = copy.deepcopy(history)
+         try:

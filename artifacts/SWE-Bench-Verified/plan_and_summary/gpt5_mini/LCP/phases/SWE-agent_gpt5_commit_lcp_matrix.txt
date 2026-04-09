@@ -1,0 +1,14 @@
+Agent: SA | Model: gpt5_commit
+===================================================================
+
+Resolved
+  easy           : ⟨L, (P, V)^2, P⟩ (70%)
+  medium         : ⟨(L_2, P)^2, V, P⟩ (81%)
+  hard           : ⟨P, V, P, L, (P, V)^2⟩ (75%)
+  very hard      : —
+
+Unresolved
+  easy           : ⟨(L_3, P_3)^5, V, P⟩ (50%)
+  medium         : ⟨(L_2, P)^3, V, P⟩ (81%)
+  hard           : ⟨(L_3, P_2)^4, (V, L)^2, V, P, V⟩ (60%)
+  very hard      : —

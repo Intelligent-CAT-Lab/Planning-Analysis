@@ -1,0 +1,501 @@
+instance,resolution,debug_difficulty,node_count,exec_edge_count,hier_edge_count,step_count,longest_path,avg_out_degree,loop_count,avg_loop_length,backedge_fraction,max_loop_length,min_loop_length,edge_count,most_freq_node,most_freq_node_freq,loc_focus_ratio,loc_dominant_zone,loc_num_clusters,loc_avg_node_freq,repeated_view,max_view_depth,avg_view_depth,max_view_span,avg_view_span,scroll_behavior,num_deep_zooms_without_edit,back_and_forth_switch,zoom_out,patch_total,patch_success,flip_flop,repeat_failed_edit,abandonment,fail_to_success_patterns,fail_streak_max,fail_streak_avg,fail_streak_count,fail_type_not found,fail_type_no change,fail_type_multiple occurrences,fail_type_unknown,fail_type_invalid code
+django__django-17087,resolved,under15min,8,9,0,7,6,1.125,2,3.5,0.1111111111111111,4,3,11,3:cd,2,0.1,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-8707,unresolved,under1h,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:find,1,0.38,early,2,1.0,False,1,1.0,2,2.0,False,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7490,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:find,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-12973,resolved,under1h,10,10,2,11,9,1.0,1,2.0,0.1,2,2,12,8:submit,2,0.36,early,2,1.0,False,2,2.0,2,1.5,True,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-10097,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14053,unresolved,under1h,12,15,1,12,9,1.1666666666666667,3,3.3333333333333335,0.2,4,3,18,6:cd,3,0.12,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-12907,resolved,under1h,9,11,0,10,7,1.1111111111111112,2,3.0,0.18181818181818182,3,3,12,2:cd,2,0.25,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15809,resolved,under15min,6,6,1,7,5,1.0,1,1.0,0.16666666666666666,1,1,7,4:think,2,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8621,unresolved,under15min,18,17,0,18,17,0.9444444444444444,0,0.0,0.0,0,0,17,0:think,1,0.67,middle,1,1.0,False,1,1.0,12,12.0,False,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-10844,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-10614,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15382,unresolved,under1h,2,1,0,2,1,0.5,0,0.0,0.0,0,0,1,0:str_replace_editor: view,1,0.5,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13551,unresolved,under1h,11,10,1,10,10,0.9090909090909091,0,0.0,0.0,0,0,11,0:think,1,0.36,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11749,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-2317,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-12585,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15128,unresolved,under4h,9,10,0,9,7,1.0,1,3.0,0.1,3,3,12,2:cd,2,0.27,middle,2,1.5,True,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-17029,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15741,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-10051,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-25931,unresolved,under1h,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13670,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.33,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-14711,unresolved,under15min,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-7229,unresolved,under1h,13,13,0,13,11,1.0,1,9.0,0.07692307692307693,9,9,14,3:think,2,0.43,middle,2,1.0,False,1,1.0,4,4.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16139,resolved,under15min,5,5,1,6,4,1.0,1,2.0,0.2,2,2,6,3:submit,2,0.33,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12304,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:str_replace_editor: view,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14007,unresolved,under4h,9,8,0,8,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:think,1,0.22,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13028,unresolved,under1h,5,5,0,6,4,1.0,1,2.0,0.2,2,2,5,3:submit,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11740,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16333,resolved,under15min,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.12,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13410,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7462,unresolved,under15min,9,8,0,9,8,0.8888888888888888,0,0.0,0.0,0,0,8,0:think,1,0.11,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,1,False,False,False,N/A,1,1.0,1,0,0,1,0,0
+django__django-13279,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-20859,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7205,resolved,under15min,10,11,0,12,8,1.1,2,2.5,0.18181818181818182,3,2,11,4:python,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4094,resolved,under15min,16,24,1,20,8,1.25,5,4.2,0.20833333333333334,7,2,27,1:cd,5,0.24,early,4,1.2,True,2,1.5,2,1.5,True,1,False,True,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13417,resolved,under15min,27,26,2,27,26,0.9629629629629629,0,0.0,0.0,0,0,28,0:think,1,0.48,mixed,4,1.0,False,2,1.17,11,6.5,True,0,False,True,2,1,False,False,False,N/A,1,1.0,1,1,0,0,0,0
+django__django-12155,resolved,under1h,12,12,1,12,11,1.0,1,2.0,0.08333333333333333,2,2,13,10:submit,2,0.15,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13798,unresolved,under1h,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-20916,unresolved,under15min,9,8,2,9,8,0.8888888888888888,0,0.0,0.0,0,0,10,0:str_replace_editor: view,1,0.33,early,1,1.0,False,3,3.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14629,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16950,unresolved,under1h,8,10,4,11,7,1.0,1,1.0,0.3,1,1,14,6:str_replace_editor: view,4,0.73,mixed,2,1.6,True,4,4.0,4,1.75,True,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-18189,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13089,resolved,under15min,7,7,1,8,6,1.0,1,2.0,0.14285714285714285,2,2,8,5:submit,2,0.25,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7454,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-25102,unresolved,under4h,1,0,0,1,0,0.0,0,0.0,0.0,0,0,0,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-6938,unresolved,under1h,7,6,0,6,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:think,1,0.14,middle,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15315,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:find,1,0.33,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15127,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16100,unresolved,under15min,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:think,1,0.5,middle,1,1.0,False,1,1.0,3,3.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pallets__flask-5014,unresolved,under15min,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.25,early,2,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11119,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-23534,unresolved,under15min,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-16886,unresolved,under15min,12,11,4,12,11,0.9166666666666666,0,0.0,0.0,0,0,15,0:str_replace_editor: view,1,0.42,middle,3,1.0,False,4,3.0,2,1.25,False,2,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15572,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:str_replace_editor: view,1,0.25,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16136,unresolved,under1h,3,2,0,3,2,0.6666666666666666,0,0.0,0.0,0,0,2,0:think,1,0.33,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13212,unresolved,under4h,5,4,3,5,4,0.8,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.8,middle,1,1.0,False,3,3.0,2,1.33,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16612,unresolved,under1h,16,24,1,20,8,1.25,5,3.6,0.20833333333333334,5,3,26,4:cd,5,0.08,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7324,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-6202,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-20801,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11292,unresolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:find,1,0.38,early,2,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-3151,unresolved,under1h,11,13,2,12,9,1.0909090909090908,2,4.5,0.15384615384615385,7,2,17,1:cd,2,0.36,early,3,1.0,False,2,2.0,2,1.5,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-19346,resolved,under1h,9,9,1,9,8,1.0,1,2.0,0.1111111111111111,2,2,11,7:submit,2,0.2,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24970,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-8872,unresolved,under1h,9,8,0,8,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:think,1,0.22,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15851,resolved,under15min,4,4,0,5,3,1.0,1,2.0,0.25,2,2,4,2:submit,2,0.2,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-5414,unresolved,under15min,10,9,1,9,9,0.9,0,0.0,0.0,0,0,10,0:str_replace_editor: view,1,0.4,early,3,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14725,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9281,unresolved,under15min,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.14,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16429,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12419,resolved,under15min,7,7,1,8,6,1.0,1,2.0,0.14285714285714285,2,2,8,5:submit,2,0.5,early,2,1.0,False,2,1.5,2,1.5,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13933,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-10914,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14771,resolved,under1h,6,6,1,7,5,1.0,1,1.0,0.16666666666666666,1,1,7,5:submit,2,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14315,unresolved,under15min,3,2,0,3,2,0.6666666666666666,0,0.0,0.0,0,0,2,0:str_replace_editor: view,1,0.33,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8551,resolved,under1h,15,16,1,14,9,1.0666666666666667,2,3.5,0.125,4,3,17,4:cd,3,0.18,early,2,1.0,False,2,1.5,2,1.5,False,1,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-11445,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13328,resolved,under15min,8,10,0,9,6,1.125,2,3.5,0.2,4,3,12,1:cd,2,0.27,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14915,resolved,under15min,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.25,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-10908,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11490,unresolved,under15min,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.14,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7521,unresolved,under15min,16,17,1,16,11,1.0,1,7.0,0.058823529411764705,7,7,19,5:cd,2,0.11,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,4,4,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-24066,unresolved,under1h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.43,early,1,1.0,False,1,1.0,3,3.0,False,3,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15345,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-5840,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8593,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9673,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15695,unresolved,under1h,9,8,2,9,8,0.8888888888888888,0,0.0,0.0,0,0,10,0:str_replace_editor: view,1,0.44,early,1,1.0,False,3,3.0,1,1.0,True,0,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15037,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11400,unresolved,under4h,9,9,2,10,8,1.0,1,2.0,0.1111111111111111,2,2,11,7:submit,2,0.3,middle,2,1.0,False,3,3.0,1,1.0,True,0,False,True,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-22871,unresolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.25,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,2,1,False,False,False,N/A,1,1.0,1,1,0,0,0,0
+django__django-12276,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16877,resolved,under1h,16,18,4,16,14,1.125,3,3.0,0.1111111111111111,4,2,25,10:cd,2,0.26,early,2,1.0,False,3,2.67,2,1.67,False,1,False,True,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15098,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+mwaskom__seaborn-3069,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11603,resolved,under15min,13,14,0,15,11,1.0769230769230769,2,2.0,0.14285714285714285,2,2,14,7:python,2,0.07,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15268,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-8399,resolved,under1h,9,9,2,9,8,1.0,1,2.0,0.1111111111111111,2,2,12,7:submit,2,0.3,early,1,1.0,False,2,2.0,2,1.5,False,1,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7748,unresolved,under1h,7,6,2,7,6,0.8571428571428571,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.43,early,1,1.0,False,3,3.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14376,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11099,resolved,under15min,16,18,0,17,14,1.0625,2,3.0,0.1111111111111111,3,3,19,0:str_replace_editor: view,2,0.11,early,2,2.0,True,1,1.0,2,2.0,False,0,False,False,3,2,False,False,False,N/A,1,1.0,1,0,0,1,0,0
+django__django-14349,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-6528,unresolved,under1h,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.38,early,1,1.0,False,1,1.0,3,3.0,False,2,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9229,unresolved,under4h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.14,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15499,resolved,under15min,26,34,2,30,16,1.1538461538461537,5,4.2,0.14705882352941177,6,3,36,9:cd,5,0.14,early,2,1.0,False,2,1.67,2,2.0,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-13398,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14580,unresolved,under15min,9,8,1,9,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:think,1,0.33,middle,1,1.0,False,2,1.5,2,1.5,False,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14182,unresolved,under1h,7,7,1,8,5,1.0,1,5.0,0.14285714285714285,5,5,8,1:think,2,0.25,middle,1,1.0,False,2,2.0,1,1.0,False,1,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-23413,unresolved,under1h,17,18,5,19,14,1.0588235294117647,2,2.0,0.1111111111111111,2,2,23,8:python,3,0.63,middle,3,1.2,True,3,2.5,3,2.0,False,3,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7985,unresolved,under1h,16,19,0,17,9,1.0625,2,6.0,0.10526315789473684,6,6,21,2:cd,3,0.15,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,7,6,False,False,False,N/A,1,1.0,1,1,0,0,0,0
+sympy__sympy-19783,unresolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.38,middle,2,1.0,False,2,1.5,2,1.5,True,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8595,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13590,unresolved,under1h,3,2,0,3,2,0.6666666666666666,0,0.0,0.0,0,0,2,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13109,resolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13124,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13794,unresolved,under15min,7,6,0,6,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:think,1,0.14,middle,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7982,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12663,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-10356,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15022,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14752,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-22714,resolved,under15min,10,13,1,11,7,1.2,3,3.3333333333333335,0.23076923076923078,5,2,16,1:cd,3,0.29,early,2,1.0,False,2,2.0,1,1.0,True,0,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14539,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14995,unresolved,under15min,11,10,4,11,10,0.9090909090909091,0,0.0,0.0,0,0,14,0:think,1,0.45,middle,2,1.0,False,3,2.33,3,1.67,False,3,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16801,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-12682,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-25232,unresolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.43,early,1,1.0,False,2,1.5,2,1.5,False,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16662,resolved,under1h,6,6,2,7,5,1.0,1,2.0,0.16666666666666666,2,2,8,4:submit,2,0.43,early,1,1.0,False,3,3.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-5631,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11211,unresolved,under1h,10,13,0,11,7,1.1,2,3.5,0.15384615384615385,4,3,15,1:cd,3,0.5,mixed,4,1.4,True,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11820,unresolved,under15min,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25479,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-26208,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12209,resolved,under15min,10,12,0,11,8,1.1,2,3.0,0.16666666666666666,3,3,14,4:cd,2,0.15,early,1,1.0,False,1,1.0,2,2.0,True,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14508,unresolved,under1h,8,10,0,9,6,1.125,2,2.5,0.2,3,2,12,2:cd,2,0.27,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-26466,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8120,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13091,unresolved,under1h,15,17,2,16,11,1.0666666666666667,2,4.5,0.11764705882352941,6,3,20,6:cd,2,0.17,early,2,1.0,False,2,2.0,2,1.5,True,0,False,True,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15629,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13031,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-22865,unresolved,under1h,11,12,0,11,10,1.0909090909090908,2,5.0,0.16666666666666666,8,2,13,0:cd,2,0.38,middle,2,1.0,False,1,1.0,4,4.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16255,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14983,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16631,unresolved,under4h,12,12,1,13,11,1.0,1,2.0,0.08333333333333333,2,2,13,10:submit,2,0.31,early,3,1.0,False,2,1.33,3,2.0,False,1,False,False,5,4,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+django__django-13343,resolved,under1h,10,11,5,12,9,1.1,2,1.5,0.18181818181818182,2,1,16,5:str_replace_editor: view,2,0.58,mixed,2,1.17,True,3,2.4,4,2.33,True,0,False,True,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9258,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4966,resolved,under1h,5,5,0,6,4,1.0,1,2.0,0.2,2,2,5,3:submit,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11880,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-19954,resolved,under15min,11,13,1,12,9,1.0909090909090908,2,3.0,0.15384615384615385,3,3,15,4:cd,2,0.14,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13344,unresolved,under4h,16,21,1,18,12,1.125,3,3.6666666666666665,0.14285714285714285,5,3,25,8:cd,4,0.14,early,2,1.0,False,2,1.5,2,1.5,False,0,False,False,5,3,True,False,True,N/A,2,2.0,1,2,0,0,0,0
+django__django-13512,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-10999,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12262,resolved,under1h,11,10,0,10,10,0.9090909090909091,0,0.0,0.0,0,0,11,0:think,1,0.09,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,1,False,False,False,N/A,1,1.0,1,1,0,0,0,0
+django__django-12050,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-24443,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15599,unresolved,under1h,8,8,0,8,7,1.0,1,3.0,0.125,3,3,9,5:submit,2,0.11,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16899,resolved,under15min,19,22,2,23,13,1.1578947368421053,4,2.25,0.18181818181818182,4,1,24,8:python,4,0.13,early,2,1.0,False,2,2.0,2,1.5,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-13989,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14534,unresolved,under15min,9,9,0,10,8,1.0,1,2.0,0.1111111111111111,2,2,9,7:submit,2,0.2,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16263,unresolved,under4h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-18211,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16032,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14765,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13786,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-20428,unresolved,under1h,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:cat,1,0.38,early,2,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-6028,unresolved,under1h,17,16,12,17,16,0.9411764705882353,0,0.0,0.0,0,0,28,0:str_replace_editor: view,1,0.76,mixed,1,1.0,False,3,2.09,11,4.33,True,4,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16493,unresolved,under1h,3,2,1,3,2,0.6666666666666666,0,0.0,0.0,0,0,3,0:str_replace_editor: view,1,0.67,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-5262,resolved,under15min,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.14,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14369,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14559,unresolved,under1h,12,12,2,13,10,1.0,1,2.0,0.08333333333333333,2,2,14,5:str_replace_editor: str_replace,2,0.31,early,3,1.0,False,2,2.0,2,2.0,True,0,False,True,4,1,False,True,False,N/A,3,3.0,1,1,0,2,0,0
+django__django-13112,unresolved,under15min,2,1,0,2,1,0.5,0,0.0,0.0,0,0,1,0:str_replace_editor: view,1,0.5,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11477,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-14248,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9658,unresolved,under1h,12,12,4,13,11,1.0,1,4.0,0.08333333333333333,4,4,16,8:submit,2,0.38,early,1,1.0,False,3,2.33,3,1.67,False,2,False,True,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-13977,unresolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:think,1,0.25,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14598,unresolved,under1h,13,15,2,12,11,1.0,1,11.0,0.06666666666666667,11,11,19,1:cd,2,0.31,early,4,1.0,False,2,2.0,2,1.5,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-22914,unresolved,under1h,2,1,0,2,1,0.5,0,0.0,0.0,0,0,1,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14999,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-24213,unresolved,under1h,9,8,0,9,8,0.8888888888888888,0,0.0,0.0,0,0,8,0:think,1,0.11,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25287,resolved,under15min,17,17,0,17,16,1.0,1,12.0,0.058823529411764705,12,12,17,5:submit,2,0.22,early,4,1.0,False,1,1.0,3,3.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4356,resolved,under15min,14,15,0,16,10,1.0714285714285714,2,3.5,0.13333333333333333,4,3,15,6:python,2,0.06,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,4,4,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15280,unresolved,under1h,29,46,2,32,14,1.3793103448275863,18,3.4444444444444446,0.2391304347826087,5,2,54,10:cd,11,0.15,early,2,1.0,False,2,2.0,2,1.5,False,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9602,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13513,unresolved,under1h,2,1,0,2,1,0.5,0,0.0,0.0,0,0,1,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-21596,unresolved,under1h,7,6,0,6,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: create,1,0.43,mixed,3,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-26291,unresolved,under1h,12,14,1,13,10,1.0833333333333333,2,4.5,0.14285714285714285,7,2,17,1:cd,2,0.4,early,2,1.0,False,2,1.5,2,1.5,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-5809,resolved,under15min,10,9,2,10,9,0.9,0,0.0,0.0,0,0,11,0:think,1,0.3,middle,1,1.0,False,2,2.0,2,1.5,True,0,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-24539,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-10081,unresolved,under15min,10,9,0,9,9,0.9,0,0.0,0.0,0,0,10,0:str_replace_editor: create,1,0.5,middle,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15930,unresolved,under15min,1,0,0,1,0,0.0,0,0.0,0.0,0,0,0,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-14531,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-25747,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:find,1,0.33,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13033,unresolved,under1h,6,6,2,7,5,1.0,1,2.0,0.16666666666666666,2,2,8,4:submit,2,0.43,early,1,1.0,False,2,2.0,2,1.5,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14672,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11790,resolved,under1h,5,5,0,6,4,1.0,1,2.0,0.2,2,2,5,3:submit,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7889,unresolved,under15min,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:str_replace_editor: create,1,0.29,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-20826,unresolved,under1h,13,15,1,12,8,1.1538461538461537,3,4.0,0.2,6,2,20,1:python,3,0.31,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-26113,resolved,under15min,12,13,4,14,10,1.0833333333333333,2,1.5,0.15384615384615385,2,1,17,5:str_replace_editor: str_replace,3,0.36,early,2,1.0,False,3,2.33,3,1.67,True,0,False,False,4,1,False,True,False,N/A,3,3.0,1,3,0,0,0,0
+django__django-15561,unresolved,under1h,9,8,1,9,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:str_replace_editor: view,1,0.56,early,1,1.0,False,2,1.25,4,2.5,False,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11551,resolved,under1h,6,6,1,7,5,1.0,1,2.0,0.16666666666666666,2,2,7,4:submit,2,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13837,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-5787,unresolved,under4h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-22719,resolved,under15min,10,11,0,10,9,1.0,1,2.0,0.0,2,2,13,4:cd,2,0.08,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-1724,resolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-23299,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13297,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-13453,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7440,unresolved,under15min,8,7,0,6,7,0.875,0,0.0,0.0,0,0,9,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14053,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15503,unresolved,under4h,11,11,1,12,10,1.0,1,2.0,0.09090909090909091,2,2,12,9:submit,2,0.17,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,3,2,False,False,False,"('general', 'localization')",1,1.0,1,1,0,0,0,0
+django__django-15731,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-10466,resolved,under1h,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:find,1,0.25,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13809,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-7233,unresolved,under1h,7,6,0,6,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:echo,1,0.43,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15104,resolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15103,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-18763,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-21847,unresolved,under15min,12,13,3,12,10,1.0,1,3.0,0.07692307692307693,3,3,18,1:cd,2,0.5,middle,2,1.17,True,2,2.0,3,2.0,True,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11133,unresolved,under15min,7,7,0,7,6,1.0,1,1.0,0.14285714285714285,1,1,9,5:think,2,0.25,early,2,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-21612,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12774,unsubmitted,under1h,2,1,0,2,1,0.5,0,0.0,0.0,0,0,1,0:str_replace_editor: view,1,0.5,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-12096,resolved,under15min,11,13,1,12,8,1.0909090909090908,2,3.0,0.15384615384615385,4,2,15,5:cd,2,0.29,middle,3,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-20154,resolved,under1h,19,21,3,19,15,1.105263157894737,3,5.0,0.14285714285714285,7,3,25,9:cd,3,0.18,early,4,1.0,False,3,2.5,2,1.33,True,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13807,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12125,unresolved,under15min,7,7,0,8,6,1.0,1,2.0,0.14285714285714285,2,2,7,5:submit,2,0.25,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14496,unresolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.29,early,2,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-7166,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:grep,1,0.33,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-21568,unresolved,under1h,9,8,0,9,8,0.8888888888888888,0,0.0,0.0,0,0,8,0:think,1,0.33,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15569,resolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11532,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-26342,resolved,under1h,15,15,1,16,14,1.0,1,4.0,0.06666666666666667,4,4,16,11:submit,2,0.56,mixed,3,1.0,False,2,1.33,3,2.0,False,2,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24627,unresolved,under1h,9,8,2,9,8,0.8888888888888888,0,0.0,0.0,0,0,10,0:think,1,0.44,early,1,1.0,False,2,2.0,2,1.5,True,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-20590,unresolved,under1h,13,12,1,13,12,0.9230769230769231,0,0.0,0.0,0,0,13,0:think,1,0.46,middle,2,1.0,False,2,1.33,3,2.0,False,3,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-10880,unresolved,under15min,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15161,unresolved,under1h,22,21,8,22,21,0.9545454545454546,0,0.0,0.0,0,0,29,0:str_replace_editor: view,1,0.64,mixed,5,1.0,False,3,2.29,6,3.0,True,1,False,False,1,0,False,False,True,N/A,1,1.0,1,0,1,0,0,0
+django__django-11999,resolved,under1h,13,15,1,14,11,1.0769230769230769,2,2.5,0.13333333333333333,3,2,16,8:cd,2,0.19,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11964,unresolved,under15min,15,14,6,15,14,0.9333333333333333,0,0.0,0.0,0,0,20,0:find,1,0.47,early,3,1.0,False,4,2.67,3,1.5,True,0,False,True,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15017,unresolved,under15min,10,11,2,10,8,1.1,2,4.0,0.18181818181818182,6,2,14,1:cd,2,0.33,early,1,1.0,False,2,2.0,2,1.5,False,1,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-24562,resolved,under15min,10,9,2,10,9,0.9,0,0.0,0.0,0,0,11,0:think,1,0.4,early,1,1.0,False,2,2.0,2,1.5,True,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4075,resolved,under15min,15,19,0,17,10,1.2,4,4.0,0.15789473684210525,5,3,20,3:cd,3,0.05,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-10435,unresolved,under15min,12,11,0,12,11,0.9166666666666666,0,0.0,0.0,0,0,11,0:think,1,0.42,middle,2,1.0,False,1,1.0,4,4.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14894,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-1142,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-9288,unresolved,under1h,9,8,0,8,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:cat,1,0.33,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,0,False,False,True,N/A,1,1.0,1,1,0,0,0,0
+sphinx-doc__sphinx-8269,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-7336,resolved,under15min,12,13,0,11,10,1.0833333333333333,2,3.5,0.15384615384615385,4,3,16,1:python,2,0.21,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-19040,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-10449,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-22080,unresolved,under1h,13,15,0,14,10,1.0769230769230769,2,5.5,0.13333333333333333,9,2,17,2:cd,2,0.25,early,3,1.0,False,1,1.0,2,2.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-3677,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13821,unresolved,under15min,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:think,1,0.25,middle,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14238,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-26323,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25122,resolved,under15min,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:think,1,0.12,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9591,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-14976,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16901,resolved,under1h,8,8,2,9,7,1.0,1,2.0,0.125,2,2,10,6:submit,2,0.33,middle,1,1.0,False,2,2.0,2,1.5,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13496,resolved,under15min,6,5,3,6,5,0.8333333333333334,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.67,early,1,1.0,False,3,3.0,2,1.33,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14493,resolved,under15min,7,7,3,8,6,1.0,1,2.0,0.14285714285714285,2,2,10,5:submit,2,0.5,early,1,1.0,False,3,2.5,2,1.33,True,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8475,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-1766,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13810,resolved,under1h,5,5,0,6,4,1.0,1,2.0,0.2,2,2,5,3:submit,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16595,resolved,under15min,7,7,0,7,6,1.0,1,2.0,0.14285714285714285,2,2,8,5:submit,2,0.12,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14096,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24637,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-23412,unresolved,under1h,17,17,0,18,16,1.0,1,3.0,0.058823529411764705,3,3,17,14:submit,2,0.44,early,3,1.0,False,1,1.0,6,6.0,False,0,False,False,4,2,False,False,False,"('localization',)",2,2.0,1,2,0,0,0,0
+django__django-14434,resolved,under1h,11,11,2,12,10,1.0,1,2.0,0.09090909090909091,2,2,13,9:submit,2,0.42,middle,3,1.0,False,2,1.67,2,2.0,True,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12708,unresolved,under4h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11179,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-17084,unresolved,under1h,8,8,3,9,7,1.0,1,1.0,0.125,1,1,11,7:submit,2,0.56,early,2,1.0,False,3,2.5,2,1.33,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11141,unresolved,under1h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.29,early,1,1.0,False,1,1.0,2,2.0,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7236,unresolved,under1h,12,11,0,12,11,0.9166666666666666,0,0.0,0.0,0,0,11,0:str_replace_editor: view,1,0.08,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,1,False,False,False,"('general',)",1,1.0,1,1,0,0,0,0
+sympy__sympy-12489,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-19637,unresolved,under15min,4,4,0,5,3,1.0,1,1.0,0.25,1,1,5,2:think,2,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-4551,unresolved,under4h,19,24,3,17,11,1.1578947368421053,5,5.2,0.16666666666666666,6,4,30,2:cd,4,0.28,early,4,1.0,False,2,2.0,3,2.0,False,2,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11728,unresolved,under1h,19,18,10,19,18,0.9473684210526315,0,0.0,0.0,0,0,28,0:str_replace_editor: str_replace,1,0.58,mixed,3,1.0,False,4,3.29,4,2.75,True,3,False,False,2,0,False,False,True,N/A,2,2.0,1,1,0,0,1,0
+django__django-12965,unresolved,under1h,25,37,0,31,13,1.24,7,5.714285714285714,0.1891891891891892,11,3,40,1:cd,7,0.32,early,7,1.33,True,1,1.0,4,4.0,False,2,False,False,5,5,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-17139,unresolved,under15min,5,5,0,6,4,1.0,1,1.0,0.2,1,1,6,3:think,2,0.17,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9367,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15375,unresolved,under1h,9,8,1,9,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:think,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14087,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14608,unresolved,under15min,14,13,0,14,13,0.9285714285714286,0,0.0,0.0,0,0,13,0:think,1,0.5,mixed,2,1.0,False,1,1.0,7,7.0,True,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+mwaskom__seaborn-3187,unresolved,under1h,14,20,1,17,10,1.2142857142857142,4,2.75,0.2,3,2,22,7:cd,4,0.1,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13449,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-10673,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16938,unresolved,under1h,9,9,0,10,8,1.0,1,2.0,0.1111111111111111,2,2,9,7:submit,2,0.2,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16560,unresolved,under4h,4,3,2,4,3,0.75,0,0.0,0.0,0,0,5,0:str_replace_editor: view,1,0.75,mixed,1,1.0,False,2,2.0,2,1.5,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13012,resolved,under1h,12,11,2,12,11,0.9166666666666666,0,0.0,0.0,0,0,13,0:think,1,0.42,early,2,1.0,False,2,2.0,2,1.5,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7432,resolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:str_replace_editor: view,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12308,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13820,resolved,under1h,5,5,1,6,4,1.0,1,2.0,0.2,2,2,6,3:submit,2,0.33,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-15100,unresolved,under1h,8,7,0,7,7,0.875,0,0.0,0.0,0,0,8,0:think,1,0.25,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-23476,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25311,unresolved,under15min,1,0,0,1,0,0.0,0,0.0,0.0,0,0,0,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14034,unresolved,under1h,9,12,0,10,6,1.1111111111111112,2,3.0,0.16666666666666666,3,3,14,1:cd,3,0.46,early,4,1.5,True,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25775,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13023,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-2905,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-6599,unresolved,under1h,8,7,0,7,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: create,1,0.25,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16569,resolved,under15min,8,10,0,9,6,1.125,2,3.5,0.2,4,3,12,1:cd,2,0.27,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15916,unresolved,under1h,16,18,2,17,14,1.0625,2,3.0,0.1111111111111111,3,3,21,8:cd,2,0.16,early,2,1.0,False,3,3.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4695,unresolved,under1h,8,7,0,7,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: create,1,0.38,middle,2,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-19495,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-23950,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:complex_command,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,2,2,True,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-12419,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12754,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16502,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:str_replace_editor: view,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,4,4,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14631,unresolved,under4h,17,16,7,17,16,0.9411764705882353,0,0.0,0.0,0,0,23,0:str_replace_editor: view,1,0.47,early,4,1.0,False,3,2.33,5,2.67,True,1,False,False,4,3,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+django__django-15525,resolved,under1h,24,37,0,24,14,1.3333333333333333,18,4.888888888888889,0.2702702702702703,7,2,37,5:cd,5,0.08,early,1,1.0,False,1,1.0,2,2.0,False,1,False,False,6,6,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13439,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14404,unresolved,under15min,11,11,3,12,10,1.0,1,2.0,0.09090909090909091,2,2,14,9:submit,2,0.5,early,2,1.0,False,2,2.0,3,2.5,False,2,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15380,resolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:think,1,0.2,middle,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-12481,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-6992,unresolved,over4h,12,20,0,16,8,1.3333333333333333,5,3.0,0.2,4,2,22,1:cd,5,0.24,early,3,1.25,True,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11149,unresolved,under1h,12,11,2,12,11,0.9166666666666666,0,0.0,0.0,0,0,13,0:think,1,0.42,early,1,1.0,False,2,2.0,2,1.5,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12193,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15973,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13757,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14855,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15987,resolved,under15min,4,4,0,5,3,1.0,1,1.0,0.25,1,1,4,3:submit,2,0.2,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13877,unresolved,under1h,11,16,0,13,7,1.2727272727272727,4,4.0,0.25,6,3,17,1:cd,4,0.29,early,2,1.0,False,1,1.0,3,3.0,True,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11451,unresolved,under15min,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-6386,unresolved,under1h,9,8,0,8,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:str_replace_editor: create,1,0.22,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14311,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13568,resolved,under1h,10,12,0,11,7,1.1,2,3.5,0.16666666666666666,5,2,13,3:cd,2,0.08,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16819,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-3305,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-20438,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-18698,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13779,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-21379,unresolved,under1h,20,24,0,22,13,1.1,3,5.666666666666667,0.125,10,1,25,2:cd,3,0.48,early,3,1.2,True,1,1.0,2,2.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16642,unresolved,under15min,10,10,1,10,9,1.0,1,2.0,0.1,2,2,12,8:submit,2,0.27,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11265,unresolved,under1h,10,10,1,10,9,1.0,1,2.0,0.1,2,2,12,8:submit,2,0.18,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14373,unresolved,under15min,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:think,1,0.25,middle,1,1.0,False,1,1.0,2,2.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11433,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13363,unresolved,under15min,2,1,0,2,1,0.5,0,0.0,0.0,0,0,1,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-7571,unresolved,under1h,15,14,3,14,14,0.9333333333333333,0,0.0,0.0,0,0,17,0:str_replace_editor: view,1,0.4,early,3,1.0,False,2,2.0,3,2.0,True,0,False,False,1,0,False,False,True,N/A,1,1.0,1,1,0,0,0,0
+matplotlib__matplotlib-24177,unresolved,under15min,9,8,0,8,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:think,1,0.33,middle,2,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15252,unresolved,under1h,22,31,1,26,10,1.1818181818181819,5,4.8,0.16129032258064516,7,4,33,2:cd,6,0.25,early,8,1.33,True,2,2.0,1,1.0,False,0,False,False,5,4,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+sympy__sympy-16597,unresolved,under4h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15863,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13647,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11066,resolved,under15min,5,5,0,6,4,1.0,1,2.0,0.2,2,2,5,3:submit,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14170,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12273,unresolved,under1h,13,12,3,13,12,0.9230769230769231,0,0.0,0.0,0,0,15,0:str_replace_editor: view,1,0.31,early,3,1.0,False,2,2.0,3,2.0,False,0,False,False,2,1,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+django__django-13158,unresolved,under1h,9,8,0,9,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:think,1,0.44,early,1,1.0,False,1,1.0,4,4.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13964,unresolved,under1h,6,5,2,6,5,0.8333333333333334,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.5,early,2,1.0,False,2,2.0,2,1.5,False,2,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11095,resolved,under1h,7,7,0,8,6,1.0,1,2.0,0.14285714285714285,2,2,7,5:submit,2,0.25,early,1,1.0,False,1,1.0,2,2.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16082,resolved,under1h,11,11,1,11,10,1.0,1,8.0,0.09090909090909091,8,8,12,3:submit,2,0.17,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-3993,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13615,unresolved,under1h,16,16,4,16,15,1.0,1,2.0,0.0625,2,2,21,14:submit,2,0.41,middle,3,1.0,False,5,5.0,1,1.0,True,0,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16485,resolved,under1h,13,20,1,15,7,1.3846153846153846,6,2.8333333333333335,0.3,5,2,26,1:cd,6,0.29,early,3,1.0,False,2,2.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13878,unresolved,over4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15976,unresolved,under1h,1,0,0,1,0,0.0,0,0.0,0.0,0,0,0,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13569,resolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.25,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24570,resolved,under15min,14,16,2,15,12,1.0714285714285714,2,2.0,0.125,3,1,19,9:cd,2,0.18,early,3,1.0,False,2,2.0,2,1.5,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14787,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15467,unresolved,under15min,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.14,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11239,resolved,under15min,4,4,0,5,3,1.0,1,2.0,0.25,2,2,4,2:submit,2,0.2,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-7606,unresolved,under1h,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15349,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14122,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11206,unresolved,under1h,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13551,unresolved,under15min,6,6,0,7,5,1.0,1,1.0,0.16666666666666666,1,1,6,5:submit,2,0.14,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7910,unresolved,under15min,14,13,2,14,13,0.9285714285714286,0,0.0,0.0,0,0,15,0:str_replace_editor: view,1,0.5,mixed,3,1.0,False,3,3.0,1,1.0,True,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-7393,unresolved,under1h,23,22,0,22,22,0.9565217391304348,0,0.0,0.0,0,0,23,0:str_replace_editor: create,1,0.61,mixed,5,1.0,False,1,1.0,10,10.0,True,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13195,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11299,unresolved,under15min,6,6,0,7,5,1.0,1,2.0,0.16666666666666666,2,2,6,4:submit,2,0.29,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-16766,unresolved,under15min,8,7,0,7,7,0.875,0,0.0,0.0,0,0,8,0:think,1,0.25,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-16792,unresolved,under1h,1,0,0,1,0,0.0,0,0.0,0.0,0,0,0,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-23824,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24149,unresolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:think,1,0.29,early,1,1.0,False,2,2.0,1,1.0,False,1,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13142,unresolved,under15min,9,12,0,10,6,1.1111111111111112,2,3.0,0.16666666666666666,3,3,13,1:cd,3,0.38,mixed,3,1.67,True,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13480,resolved,under15min,9,11,0,10,7,1.1111111111111112,2,2.5,0.18181818181818182,3,2,12,3:cd,2,0.08,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14140,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:str_replace_editor: view,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-24661,unresolved,under1h,34,48,6,42,19,1.2058823529411764,8,4.5,0.1875,12,2,57,8:cd,7,0.16,early,8,1.14,True,4,3.4,4,2.0,True,0,False,True,9,4,False,False,False,"('localization', 'general', 'localization')",3,1.67,3,4,0,1,0,0
+django__django-10973,unresolved,under1h,8,7,3,8,7,0.875,0,0.0,0.0,0,0,10,0:str_replace_editor: view,1,0.5,early,1,1.0,False,4,4.0,1,1.0,False,1,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14539,resolved,under15min,21,28,2,22,16,1.1904761904761905,6,3.5,0.17857142857142858,5,2,34,9:cd,4,0.1,early,2,1.0,False,3,3.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-8898,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14309,unresolved,under15min,7,6,0,6,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: create,1,0.29,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11848,unresolved,under1h,2,2,0,3,1,1.0,1,1.0,0.5,1,1,2,1:submit,2,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7590,unresolved,over4h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8721,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11087,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13516,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16256,unresolved,under1h,4,4,0,5,3,1.0,1,1.0,0.25,1,1,4,2:think,2,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15278,unresolved,under1h,17,20,0,18,11,1.0588235294117647,2,6.5,0.1,8,5,21,2:cd,3,0.48,middle,3,1.25,True,1,1.0,1,1.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14141,unresolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.29,early,2,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-13579,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12406,unresolved,under1h,10,10,0,10,9,1.0,1,2.0,0.1,2,2,10,8:submit,2,0.09,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-14710,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13741,resolved,under15min,12,11,2,12,11,0.9166666666666666,0,0.0,0.0,0,0,13,0:think,1,0.25,early,2,1.0,False,2,2.0,2,1.5,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-7277,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-10554,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-6461,resolved,under15min,10,13,1,12,8,1.2,3,4.0,0.15384615384615385,6,2,16,2:think,2,0.14,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-23314,unresolved,under1h,11,17,0,13,7,1.2727272727272727,4,2.75,0.17647058823529413,3,2,22,1:cd,5,0.39,middle,5,1.75,True,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13128,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11815,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-14365,unresolved,under1h,3,2,1,3,2,0.6666666666666666,0,0.0,0.0,0,0,3,0:str_replace_editor: view,1,0.67,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-7080,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-10323,unresolved,under15min,7,6,2,7,6,0.8571428571428571,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.43,early,1,1.0,False,3,3.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16454,unresolved,under1h,9,11,0,7,7,1.1111111111111112,2,4.5,0.18181818181818182,5,4,11,3:cd,2,0.08,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,3,3,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9461,unresolved,under4h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.14,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15814,resolved,under1h,9,8,1,9,8,0.8888888888888888,0,0.0,0.0,0,0,9,0:str_replace_editor: view,1,0.22,early,1,1.0,False,2,2.0,1,1.0,True,0,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9698,unresolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13925,unresolved,under1h,8,7,2,8,7,0.875,0,0.0,0.0,0,0,9,0:str_replace_editor: view,1,0.38,middle,2,1.0,False,3,3.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16661,unresolved,under1h,33,46,5,37,19,1.2424242424242424,9,5.666666666666667,0.1956521739130435,16,2,55,4:cd,7,0.06,early,2,1.0,False,3,3.0,1,1.0,True,1,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13121,unresolved,under1h,13,12,1,13,12,0.9230769230769231,0,0.0,0.0,0,0,13,0:str_replace_editor: view,1,0.31,early,2,1.0,False,2,1.33,3,2.0,False,1,False,False,4,4,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9230,unresolved,under15min,5,5,1,6,4,1.0,1,1.0,0.2,1,1,7,3:think,2,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-7671,unresolved,under1h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.43,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-4661,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:grep,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12858,resolved,under1h,15,14,1,15,14,0.9333333333333333,0,0.0,0.0,0,0,15,0:str_replace_editor: view,1,0.6,early,1,1.0,False,2,1.2,5,3.0,True,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14155,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-21930,unresolved,under1h,12,12,2,12,11,1.0,1,2.0,0.08333333333333333,2,2,15,10:submit,2,0.23,early,2,1.0,False,3,3.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11276,resolved,under1h,11,12,0,11,9,1.0909090909090908,2,3.5,0.16666666666666666,4,3,14,6:cd,2,0.08,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-17655,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11885,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-7757,unresolved,under1h,11,10,3,11,10,0.9090909090909091,0,0.0,0.0,0,0,13,0:think,1,0.45,middle,2,1.0,False,2,2.0,3,2.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14500,unresolved,under1h,9,8,2,9,8,0.8888888888888888,0,0.0,0.0,0,0,10,0:str_replace_editor: view,1,0.33,early,2,1.0,False,3,3.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-6903,resolved,under15min,4,4,0,5,3,1.0,1,2.0,0.25,2,2,4,2:submit,2,0.2,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15277,unresolved,under15min,14,14,3,15,9,1.0,1,5.0,0.07142857142857142,5,5,17,5:str_replace_editor: str_replace,2,0.27,early,4,1.0,False,3,2.5,2,1.33,True,0,False,False,2,0,False,True,True,N/A,2,2.0,1,0,0,2,0,0
+django__django-13346,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14351,unresolved,under1h,7,6,5,7,6,0.8571428571428571,0,0.0,0.0,0,0,11,0:str_replace_editor: view,1,0.71,mixed,2,1.0,False,3,2.5,3,1.67,True,1,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12039,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16667,unresolved,under1h,9,8,2,9,8,0.8888888888888888,0,0.0,0.0,0,0,10,0:str_replace_editor: view,1,0.44,early,1,1.0,False,3,3.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13315,unresolved,under1h,5,5,1,6,4,1.0,1,2.0,0.2,2,2,6,3:submit,2,0.33,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-4604,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14792,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-23262,unresolved,under1h,15,24,0,22,10,1.2,4,3.5,0.3333333333333333,7,1,26,9:str_replace_editor: str_replace,5,0.64,mixed,5,2.0,True,1,1.0,1,1.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-13135,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13852,unresolved,under4h,14,13,3,13,13,0.9285714285714286,0,0.0,0.0,0,0,17,0:str_replace_editor: view,1,0.29,early,3,1.0,False,3,3.0,2,1.33,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8548,unresolved,under4h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-17630,unresolved,under4h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-10297,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9711,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-14623,unresolved,under1h,20,26,3,23,16,1.15,4,6.75,0.11538461538461539,12,3,31,5:cd,3,0.33,early,6,1.12,True,2,1.75,3,2.5,False,1,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-25973,resolved,under15min,15,18,4,16,12,1.1333333333333333,3,5.0,0.16666666666666666,9,2,24,0:cd,3,0.32,early,2,1.0,False,2,2.0,4,2.5,True,0,False,True,4,3,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+sympy__sympy-22456,unresolved,under1h,12,12,3,12,11,1.0,1,3.0,0.08333333333333333,3,3,16,9:submit,2,0.38,early,1,1.0,False,3,2.5,2,1.33,False,1,False,True,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25960,unresolved,under1h,18,26,0,19,9,1.3333333333333333,7,3.2857142857142856,0.23076923076923078,5,2,27,5:cd,7,0.04,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,2,1,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+django__django-12713,unresolved,under1h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.29,early,1,1.0,False,1,1.0,2,2.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11734,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:think,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14089,resolved,under15min,14,16,2,14,11,1.0714285714285714,2,2.5,0.0625,3,2,20,4:cd,3,0.29,early,2,1.0,False,3,3.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24870,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-18199,unresolved,under4h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:think,1,0.14,middle,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15732,unresolved,under1h,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.29,early,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,0,False,False,True,N/A,1,1.0,1,1,0,0,0,0
+astropy__astropy-13033,unresolved,under1h,6,7,0,6,4,1.0,1,4.0,0.14285714285714285,4,4,9,1:cd,2,0.38,middle,2,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16527,resolved,under1h,8,8,1,9,7,1.0,1,2.0,0.125,2,2,9,6:submit,2,0.33,early,3,1.0,False,2,1.5,2,1.5,True,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8265,unresolved,under1h,15,14,1,15,14,0.9333333333333333,0,0.0,0.0,0,0,15,0:str_replace_editor: view,1,0.47,early,4,1.0,False,2,1.2,5,3.0,False,3,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14011,unresolved,under4h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11138,unresolved,under4h,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.12,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pylint-dev__pylint-4970,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15554,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-1921,unresolved,under15min,8,8,0,8,7,1.0,1,2.0,0.125,2,2,8,6:submit,2,0.22,early,1,1.0,False,1,1.0,2,2.0,False,1,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pytest-dev__pytest-6197,unresolved,under4h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13974,unresolved,under1h,6,5,1,6,5,0.8333333333333334,0,0.0,0.0,0,0,6,0:str_replace_editor: view,1,0.33,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-9296,resolved,under15min,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:str_replace_editor: view,1,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11555,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-11578,resolved,under1h,8,8,0,8,7,1.0,1,1.0,0.125,1,1,9,7:submit,2,0.11,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8035,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-11618,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+scikit-learn__scikit-learn-26194,unresolved,under1h,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4629,resolved,under15min,8,8,1,8,7,1.0,1,2.0,0.125,2,2,10,6:submit,2,0.22,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11951,unresolved,under15min,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:think,1,0.43,middle,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8056,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16145,resolved,under15min,14,15,0,14,11,1.0,1,4.0,0.06666666666666667,4,4,15,5:cd,2,0.06,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15368,resolved,under15min,21,27,1,23,11,1.1904761904761905,5,3.6,0.18518518518518517,6,2,29,6:cd,4,0.07,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,6,6,True,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8638,unresolved,under1h,6,6,1,7,5,1.0,1,1.0,0.16666666666666666,1,1,8,4:think,2,0.29,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-7530,resolved,under1h,48,60,3,60,26,1.25,17,4.235294117647059,0.21666666666666667,7,1,63,21:submit,8,0.31,early,9,1.27,True,3,2.5,2,1.33,False,1,False,True,7,5,True,True,True,N/A,2,2.0,1,0,0,0,2,0
+sympy__sympy-16450,unresolved,under15min,7,6,0,7,6,0.8571428571428571,0,0.0,0.0,0,0,6,0:find,1,0.43,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11163,resolved,under15min,19,24,4,21,15,1.105263157894737,3,3.0,0.125,3,3,30,10:cd,4,0.24,early,3,1.0,False,4,3.5,2,1.25,True,0,False,True,2,1,False,False,False,"('localization',)",1,1.0,1,0,0,1,0,0
+django__django-13406,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: create,1,0.2,early,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+astropy__astropy-13236,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15957,unresolved,under4h,8,7,0,8,7,0.875,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.38,middle,2,1.0,False,1,1.0,2,2.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-6721,unresolved,under1h,10,9,2,10,9,0.9,0,0.0,0.0,0,0,11,0:str_replace_editor: str_replace,1,0.3,early,2,1.0,False,2,2.0,2,1.5,False,0,False,False,1,0,False,False,True,N/A,1,1.0,1,1,0,0,0,0
+sphinx-doc__sphinx-11510,unresolved,under4h,10,9,1,10,9,0.9,0,0.0,0.0,0,0,10,0:think,1,0.2,middle,2,1.0,False,2,2.0,1,1.0,False,1,False,False,1,0,False,False,True,N/A,1,1.0,1,0,0,0,1,0
+django__django-12143,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-3095,unresolved,under1h,9,8,0,8,8,0.8888888888888888,0,0.0,0.0,0,0,8,0:think,1,0.22,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-13401,unresolved,under1h,6,5,0,6,5,0.8333333333333334,0,0.0,0.0,0,0,5,0:find,1,0.33,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-17318,unresolved,under1h,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12741,unsubmitted,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-12325,unresolved,under4h,3,2,1,3,2,0.6666666666666666,0,0.0,0.0,0,0,3,0:str_replace_editor: view,1,0.67,early,1,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16315,unresolved,under1h,20,22,1,20,14,1.05,2,4.5,0.09090909090909091,5,4,25,2:cd,3,0.13,late,2,1.0,False,2,2.0,1,1.0,False,0,False,False,4,4,True,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-9320,resolved,under15min,26,33,3,30,15,1.1538461538461537,5,4.4,0.15151515151515152,6,4,36,9:cd,4,0.12,early,3,1.0,False,2,2.0,3,2.0,True,0,False,False,4,3,False,False,False,"('localization',)",1,1.0,1,1,0,0,0,0
+scikit-learn__scikit-learn-11310,resolved,under15min,26,27,3,28,23,1.0384615384615385,2,3.0,0.07407407407407407,3,3,30,20:python,2,0.21,early,5,1.0,False,2,2.0,3,2.0,False,0,False,False,6,3,False,False,False,"('general', 'localization', 'general', 'localization')",2,1.5,2,3,0,0,0,0
+matplotlib__matplotlib-20488,unresolved,under1h,7,6,1,7,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:str_replace_editor: view,1,0.43,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,3,1,False,False,False,N/A,2,2.0,1,2,0,0,0,0
+django__django-13658,resolved,under1h,6,6,1,7,5,1.0,1,1.0,0.16666666666666666,1,1,7,5:submit,2,0.29,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-20676,unresolved,under15min,9,9,2,9,7,1.0,1,2.0,0.1111111111111111,2,2,12,6:think,2,0.5,middle,2,1.0,False,3,3.0,1,1.0,False,1,False,True,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-4687,unresolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:find,1,0.38,early,1,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+psf__requests-2931,unresolved,under1h,8,7,1,8,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.25,early,2,1.0,False,2,2.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-15563,unresolved,under1h,5,4,0,4,4,0.8,0,0.0,0.0,0,0,5,0:str_replace_editor: create,1,0.4,early,2,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-14017,resolved,under1h,20,33,1,26,9,1.35,8,3.25,0.21212121212121213,4,2,36,4:cd,8,0.24,early,5,1.33,True,2,2.0,1,1.0,False,0,False,False,5,5,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-11333,unresolved,under1h,5,5,0,6,4,1.0,1,2.0,0.2,2,2,5,3:submit,2,0.17,early,1,1.0,False,1,1.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-25332,unresolved,under15min,7,6,0,6,6,0.8571428571428571,0,0.0,0.0,0,0,7,0:think,1,0.14,middle,1,1.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+django__django-16116,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+pydata__xarray-6744,unresolved,under1h,10,11,1,10,8,1.0,1,3.0,0.09090909090909091,3,3,14,3:cd,2,0.33,early,2,1.0,False,2,2.0,1,1.0,False,0,False,False,1,1,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+matplotlib__matplotlib-24026,unresolved,under1h,8,7,0,7,7,0.875,0,0.0,0.0,0,0,8,0:str_replace_editor: view,1,0.38,early,2,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-13372,unresolved,under15min,4,3,0,4,3,0.75,0,0.0,0.0,0,0,3,0:think,1,0.0,none,0,0.0,False,0,0.0,0,0.0,False,0,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sympy__sympy-15875,unresolved,under15min,12,11,3,12,11,0.9166666666666666,0,0.0,0.0,0,0,14,0:str_replace_editor: view,1,0.33,early,2,1.0,False,4,4.0,1,1.0,False,0,False,False,2,2,False,False,False,N/A,0,0.0,0,0,0,0,0,0
+sphinx-doc__sphinx-8459,unresolved,under15min,5,4,0,5,4,0.8,0,0.0,0.0,0,0,4,0:str_replace_editor: view,1,0.2,early,1,1.0,False,1,1.0,1,1.0,False,1,False,False,0,0,False,False,False,N/A,0,0.0,0,0,0,0,0,0

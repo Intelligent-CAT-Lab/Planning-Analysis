@@ -1,0 +1,55 @@
+================================================================================
+Continuous Plan Compliance Test: deepseek_r1
+================================================================================
+
+Expected Phase Order: L_navigate → L_reproduce → P
+
+--------------------------------------------------------------------------------
+Mean Compliance Scores by Resolution Status:
+--------------------------------------------------------------------------------
+
+Resolved:
+  Count: 1
+  Mean S1 (Vocabulary): 0.7500
+  Mean S2 (Coverage):   0.6667
+  Mean S3 (Order):      0.6667
+  Mean Final Score:     0.6934 ± 0.0000
+  Range: [0.6934, 0.6934]
+
+Unresolved:
+  Count: 11
+  Mean S1 (Vocabulary): 1.0000
+  Mean S2 (Coverage):   0.4545
+  Mean S3 (Order):      0.4242
+  Mean Final Score:     0.5691 ± 0.1239
+  Range: [0.4807, 0.7631]
+
+--------------------------------------------------------------------------------
+Top 10 Instances by Final Score:
+--------------------------------------------------------------------------------
+1. instance_ansible__ansible-106909db8b730480615f4a33de0eb5b710944e78-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.7631 (S1=1.000, S2=0.667, S3=0.667)
+2. instance_ansible__ansible-748f534312f2073a25a87871f5bd05882891b8c4-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.7631 (S1=1.000, S2=0.667, S3=0.667)
+3. instance_ansible__ansible-cd9c4eb5a6b2bfaf4a6709f001ce3d0c92c1eed2-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.7631 (S1=1.000, S2=0.667, S3=0.667)
+4. instance_ansible__ansible-0ea40e09d1b35bcb69ff4d9cecf3d0defa4b36e8-v30a923fb5c164d6cd18280c02422f75e611e8fb2: 0.6934 (S1=0.750, S2=0.667, S3=0.667)
+5. instance_ansible__ansible-12734fa21c08a0ce8c84e533abdc560db2eb1955-v7eee2454f617569fd6889f2211f75bc02a35f9f8: 0.6057 (S1=1.000, S2=0.667, S3=0.333)
+6. instance_ansible__ansible-ed6581e4db2f1bec5a772213c3e186081adc162d-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+7. instance_internetarchive__openlibrary-427f1f4eddfc54735ca451779d4f95bf683d1b0e-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+8. instance_internetarchive__openlibrary-5069b09e5f64428dce59b33455c8bb17fe577070-v8717e18970bcdc4e0d2cea3b1527752b21e74866: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+9. instance_internetarchive__openlibrary-6afdb09df692223c3a31df65cfa92f15e5614c01-v08d8e8889ec945ab821fb156c04c7d2e2810debb: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+10. instance_internetarchive__openlibrary-e010b2a13697de70170033902ba2e27a1e1acbe9-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+
+--------------------------------------------------------------------------------
+Bottom 10 Instances by Final Score:
+--------------------------------------------------------------------------------
+1. instance_qutebrowser__qutebrowser-3fd8e12949b8feda401930574facf09dd4180bba: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+2. instance_qutebrowser__qutebrowser-1943fa072ec3df5a87e18a23b0916f134c131016-vafb3e8e01b31319c66c4e666b8a3b1d8ba55db24: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+3. instance_internetarchive__openlibrary-e010b2a13697de70170033902ba2e27a1e1acbe9-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+4. instance_internetarchive__openlibrary-6afdb09df692223c3a31df65cfa92f15e5614c01-v08d8e8889ec945ab821fb156c04c7d2e2810debb: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+5. instance_internetarchive__openlibrary-5069b09e5f64428dce59b33455c8bb17fe577070-v8717e18970bcdc4e0d2cea3b1527752b21e74866: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+6. instance_internetarchive__openlibrary-427f1f4eddfc54735ca451779d4f95bf683d1b0e-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+7. instance_ansible__ansible-ed6581e4db2f1bec5a772213c3e186081adc162d-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.4807 (S1=1.000, S2=0.333, S3=0.333)
+8. instance_ansible__ansible-12734fa21c08a0ce8c84e533abdc560db2eb1955-v7eee2454f617569fd6889f2211f75bc02a35f9f8: 0.6057 (S1=1.000, S2=0.667, S3=0.333)
+9. instance_ansible__ansible-0ea40e09d1b35bcb69ff4d9cecf3d0defa4b36e8-v30a923fb5c164d6cd18280c02422f75e611e8fb2: 0.6934 (S1=0.750, S2=0.667, S3=0.667)
+10. instance_ansible__ansible-cd9c4eb5a6b2bfaf4a6709f001ce3d0c92c1eed2-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.7631 (S1=1.000, S2=0.667, S3=0.667)
+
+================================================================================

@@ -1,0 +1,14 @@
+Agent: SA | Model: DSKV3
+===================================================================
+
+Resolved
+  easy           : ⟨L, P, V⟩ (68%)
+  medium         : ⟨L, P, V⟩ (70%)
+  hard           : ⟨L_2, P⟩ (100%)
+  very hard      : —
+
+Unresolved
+  easy           : ⟨L, P, V⟩ (62%)
+  medium         : ⟨L, P, V⟩ (60%)
+  hard           : ⟨L, P, V⟩ (42%)
+  very hard      : ⟨(P, L)^10, P⟩ (33%)

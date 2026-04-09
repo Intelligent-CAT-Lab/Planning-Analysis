@@ -1,0 +1,55 @@
+================================================================================
+Continuous Plan Compliance Test: devstral
+================================================================================
+
+Expected Phase Order: L_reproduce_regression_test → L_navigate → L_reproduce_newly_generated_test → P → V_newly_generated_test → V_regression_test
+
+--------------------------------------------------------------------------------
+Mean Compliance Scores by Resolution Status:
+--------------------------------------------------------------------------------
+
+Resolved:
+  Count: 6
+  Mean S1 (Vocabulary): 1.0000
+  Mean S2 (Coverage):   0.9167
+  Mean S3 (Order):      0.7222
+  Mean Final Score:     0.8674 ± 0.1053
+  Range: [0.6934, 0.9410]
+
+Unresolved:
+  Count: 8
+  Mean S1 (Vocabulary): 1.0000
+  Mean S2 (Coverage):   0.8333
+  Mean S3 (Order):      0.6042
+  Mean Final Score:     0.7874 ± 0.1489
+  Range: [0.5503, 0.9410]
+
+--------------------------------------------------------------------------------
+Top 10 Instances by Final Score:
+--------------------------------------------------------------------------------
+1. instance_ansible__ansible-a6e671db25381ed111bbad0ab3e7d97366395d05-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+2. instance_internetarchive__openlibrary-3f580a5f244c299d936d73d9e327ba873b6401d9-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+3. instance_internetarchive__openlibrary-427f1f4eddfc54735ca451779d4f95bf683d1b0e-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+4. instance_internetarchive__openlibrary-4a5d2a7d24c9e4c11d3069220c0685b736d5ecde-v13642507b4fc1f8d234172bf8129942da2c2ca26: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+5. instance_internetarchive__openlibrary-6afdb09df692223c3a31df65cfa92f15e5614c01-v08d8e8889ec945ab821fb156c04c7d2e2810debb: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+6. instance_internetarchive__openlibrary-de6ae10512f1b5ef585c8341b451bc49c9fd4996-vfa6ff903cb27f336e17654595dd900fa943dcd91: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+7. instance_ansible__ansible-39bd8b99ec8c6624207bf3556ac7f9626dad9173-v1055803c3a812189a1133297f7f5468579283f86: 0.8736 (S1=1.000, S2=1.000, S3=0.667)
+8. instance_internetarchive__openlibrary-3aeec6afed9198d734b7ee1293f03ca94ff970e1-v13642507b4fc1f8d234172bf8129942da2c2ca26: 0.8736 (S1=1.000, S2=1.000, S3=0.667)
+9. instance_qutebrowser__qutebrowser-3fd8e12949b8feda401930574facf09dd4180bba: 0.8221 (S1=1.000, S2=0.833, S3=0.667)
+10. instance_ansible__ansible-748f534312f2073a25a87871f5bd05882891b8c4-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.7469 (S1=1.000, S2=0.833, S3=0.500)
+
+--------------------------------------------------------------------------------
+Bottom 10 Instances by Final Score:
+--------------------------------------------------------------------------------
+1. instance_qutebrowser__qutebrowser-34a13afd36b5e529d553892b1cd8b9d5ce8881c4-vafb3e8e01b31319c66c4e666b8a3b1d8ba55db24: 0.5503 (S1=1.000, S2=0.500, S3=0.333)
+2. instance_internetarchive__openlibrary-e010b2a13697de70170033902ba2e27a1e1acbe9-v0f5aece3601a5b4419f7ccec1dbda2071be28ee4: 0.5503 (S1=1.000, S2=0.500, S3=0.333)
+3. instance_qutebrowser__qutebrowser-1943fa072ec3df5a87e18a23b0916f134c131016-vafb3e8e01b31319c66c4e666b8a3b1d8ba55db24: 0.6934 (S1=1.000, S2=0.667, S3=0.500)
+4. instance_internetarchive__openlibrary-5069b09e5f64428dce59b33455c8bb17fe577070-v8717e18970bcdc4e0d2cea3b1527752b21e74866: 0.7469 (S1=1.000, S2=0.833, S3=0.500)
+5. instance_ansible__ansible-748f534312f2073a25a87871f5bd05882891b8c4-v0f01c69f1e2528b935359cfe578530722bca2c59: 0.7469 (S1=1.000, S2=0.833, S3=0.500)
+6. instance_qutebrowser__qutebrowser-3fd8e12949b8feda401930574facf09dd4180bba: 0.8221 (S1=1.000, S2=0.833, S3=0.667)
+7. instance_internetarchive__openlibrary-3aeec6afed9198d734b7ee1293f03ca94ff970e1-v13642507b4fc1f8d234172bf8129942da2c2ca26: 0.8736 (S1=1.000, S2=1.000, S3=0.667)
+8. instance_ansible__ansible-39bd8b99ec8c6624207bf3556ac7f9626dad9173-v1055803c3a812189a1133297f7f5468579283f86: 0.8736 (S1=1.000, S2=1.000, S3=0.667)
+9. instance_internetarchive__openlibrary-de6ae10512f1b5ef585c8341b451bc49c9fd4996-vfa6ff903cb27f336e17654595dd900fa943dcd91: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+10. instance_internetarchive__openlibrary-6afdb09df692223c3a31df65cfa92f15e5614c01-v08d8e8889ec945ab821fb156c04c7d2e2810debb: 0.9410 (S1=1.000, S2=1.000, S3=0.833)
+
+================================================================================

@@ -1,0 +1,7 @@
+data/SWE-agent/trajectories/
+data/OpenHands/trajectories/
+__pycache__/
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints

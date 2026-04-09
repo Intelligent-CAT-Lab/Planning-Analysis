@@ -1,0 +1,14 @@
+Agent: SA | Model: DSKR1
+===================================================================
+
+Resolved
+  easy           : ⟨L, P⟩ (100%)
+  medium         : ⟨P, V_3⟩ (100%)
+  hard           : ⟨L_2, P_2⟩ (100%)
+  very hard      : —
+
+Unresolved
+  easy           : ⟨L⟩ (100%)
+  medium         : ⟨L⟩ (98%)
+  hard           : —
+  very hard      : —

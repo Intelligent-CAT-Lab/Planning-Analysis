@@ -1,0 +1,14 @@
+Agent: sa | Model: dsk-v3
+===================================================================
+
+Resolved
+  easy           : ⟨L, P, V, P⟩ (39%)
+  medium         : ⟨L, P, V, P⟩ (56%)
+  hard           : ⟨(P, V)^2, P⟩ (50%)
+  very hard      : —
+
+Unresolved
+  easy           : ⟨L_2, P, V, P⟩ (38%)
+  medium         : ⟨L, (P, V)^2⟩ (36%)
+  hard           : ⟨L_3, (P, V)^2⟩ (42%)
+  very hard      : ⟨P_4, (L, P_2, V_3)^2⟩ (33%)

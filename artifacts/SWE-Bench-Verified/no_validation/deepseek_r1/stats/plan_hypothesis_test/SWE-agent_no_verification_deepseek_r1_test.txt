@@ -1,0 +1,216 @@
+================================================================================
+Plan Hypothesis Test: deepseek_r1
+================================================================================
+
+Expected Phase Order (by first appearance): L_navigate → L_reproduce → P
+
+--------------------------------------------------------------------------------
+Breakdown by Resolution Status:
+--------------------------------------------------------------------------------
+
+Resolved:
+  Total: 30
+  Compliant: 0
+  Non-Compliant: 30
+  Compliance Rate: 0.00% (0/30)
+  95% CI: [0.00%, 11.35%]
+
+Unresolved:
+  Total: 144
+  Compliant: 0
+  Non-Compliant: 144
+  Compliance Rate: 0.00% (0/144)
+  95% CI: [0.00%, 2.60%]
+
+--------------------------------------------------------------------------------
+Statistical Association (Resolution Status ↔ Compliance):
+--------------------------------------------------------------------------------
+Chi-square test: χ² = 0.0000, p = 1.0000
+Significance: not significant (p ≥ 0.05)
+Phi coefficient: φ = 0.0000
+Effect size: negligible
+Sample size: n = 174
+
+--------------------------------------------------------------------------------
+Compliant Instances (0):
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Non-Compliant Instances (174):
+--------------------------------------------------------------------------------
+  - astropy__astropy-12907
+  - astropy__astropy-13236
+  - astropy__astropy-13398
+  - astropy__astropy-13579
+  - astropy__astropy-14096
+  - astropy__astropy-14369
+  - astropy__astropy-8872
+  - django__django-10097
+  - django__django-10554
+  - django__django-10999
+  - django__django-11087
+  - django__django-11138
+  - django__django-11163
+  - django__django-11239
+  - django__django-11265
+  - django__django-11490
+  - django__django-11532
+  - django__django-11551
+  - django__django-11790
+  - django__django-11815
+  - django__django-12050
+  - django__django-12125
+  - django__django-12143
+  - django__django-12155
+  - django__django-12304
+  - django__django-12325
+  - django__django-12419
+  - django__django-12708
+  - django__django-12741
+  - django__django-12774
+  - django__django-13028
+  - django__django-13033
+  - django__django-13089
+  - django__django-13109
+  - django__django-13112
+  - django__django-13121
+  - django__django-13158
+  - django__django-13212
+  - django__django-13279
+  - django__django-13297
+  - django__django-13315
+  - django__django-13343
+  - django__django-13344
+  - django__django-13346
+  - django__django-13401
+  - django__django-13406
+  - django__django-13512
+  - django__django-13516
+  - django__django-13590
+  - django__django-13670
+  - django__django-13741
+  - django__django-13786
+  - django__django-13794
+  - django__django-13809
+  - django__django-13810
+  - django__django-13933
+  - django__django-14034
+  - django__django-14140
+  - django__django-14155
+  - django__django-14238
+  - django__django-14311
+  - django__django-14315
+  - django__django-14376
+  - django__django-14434
+  - django__django-14534
+  - django__django-14559
+  - django__django-14580
+  - django__django-14672
+  - django__django-14752
+  - django__django-14765
+  - django__django-14771
+  - django__django-14787
+  - django__django-14792
+  - django__django-14855
+  - django__django-15098
+  - django__django-15128
+  - django__django-15252
+  - django__django-15268
+  - django__django-15277
+  - django__django-15315
+  - django__django-15467
+  - django__django-15563
+  - django__django-15569
+  - django__django-15695
+  - django__django-15731
+  - django__django-15863
+  - django__django-15916
+  - django__django-16032
+  - django__django-16082
+  - django__django-16116
+  - django__django-16136
+  - django__django-16139
+  - django__django-16333
+  - django__django-16454
+  - django__django-16493
+  - django__django-16569
+  - django__django-16642
+  - django__django-16661
+  - django__django-16662
+  - django__django-16667
+  - django__django-16819
+  - django__django-16877
+  - django__django-16899
+  - django__django-16901
+  - django__django-16950
+  - django__django-17087
+  - matplotlib__matplotlib-20859
+  - matplotlib__matplotlib-21568
+  - matplotlib__matplotlib-22719
+  - matplotlib__matplotlib-22871
+  - matplotlib__matplotlib-23314
+  - matplotlib__matplotlib-24026
+  - matplotlib__matplotlib-24149
+  - matplotlib__matplotlib-24627
+  - matplotlib__matplotlib-24870
+  - matplotlib__matplotlib-24970
+  - matplotlib__matplotlib-25311
+  - matplotlib__matplotlib-25479
+  - matplotlib__matplotlib-25775
+  - matplotlib__matplotlib-26208
+  - matplotlib__matplotlib-26291
+  - matplotlib__matplotlib-26342
+  - matplotlib__matplotlib-26466
+  - psf__requests-1142
+  - psf__requests-1724
+  - psf__requests-1766
+  - psf__requests-1921
+  - psf__requests-2931
+  - psf__requests-6028
+  - pydata__xarray-4075
+  - pydata__xarray-4356
+  - pydata__xarray-4629
+  - pydata__xarray-7233
+  - pylint-dev__pylint-4661
+  - pytest-dev__pytest-10356
+  - pytest-dev__pytest-5787
+  - pytest-dev__pytest-5809
+  - pytest-dev__pytest-7982
+  - scikit-learn__scikit-learn-11578
+  - scikit-learn__scikit-learn-12585
+  - scikit-learn__scikit-learn-12682
+  - scikit-learn__scikit-learn-13124
+  - scikit-learn__scikit-learn-13135
+  - scikit-learn__scikit-learn-13142
+  - scikit-learn__scikit-learn-13496
+  - scikit-learn__scikit-learn-13779
+  - scikit-learn__scikit-learn-14710
+  - scikit-learn__scikit-learn-25102
+  - scikit-learn__scikit-learn-25973
+  - sphinx-doc__sphinx-10323
+  - sphinx-doc__sphinx-11445
+  - sphinx-doc__sphinx-7590
+  - sphinx-doc__sphinx-7889
+  - sphinx-doc__sphinx-7985
+  - sphinx-doc__sphinx-8056
+  - sphinx-doc__sphinx-8459
+  - sphinx-doc__sphinx-9320
+  - sympy__sympy-12419
+  - sympy__sympy-13798
+  - sympy__sympy-13852
+  - sympy__sympy-15017
+  - sympy__sympy-15345
+  - sympy__sympy-15349
+  - sympy__sympy-16450
+  - sympy__sympy-16597
+  - sympy__sympy-16886
+  - sympy__sympy-17630
+  - sympy__sympy-18211
+  - sympy__sympy-21379
+  - sympy__sympy-21596
+  - sympy__sympy-22914
+  - sympy__sympy-23413
+  - sympy__sympy-24213
+  - sympy__sympy-24443
+
+================================================================================

@@ -1,0 +1,672 @@
+"""
+Continuous Plan Hypothesis Test: Compute numeric compliance scores for agent trajectories.
+
+CORE LOGIC:
+Computes a continuous compliance score (0 to 1) based on three components:
+
+1. S1 - Vocabulary Deviation (extra terminal types):
+   S1 = m / (m + |X|)
+   where m = number of distinct expected phases, X = set of distinct out-of-alphabet phases
+   Perfect score (S1=1) when no extra phase types exist
+
+2. S2 - Required Production Coverage (recall):
+   S2 = (required symbols seen) / (required symbols)
+   Perfect score (S2=1) when all expected phases appear
+
+3. S3 - Order Conformance (based on first appearances):
+   S3 = (longest increasing subsequence of first appearances) / (expected phase sequence length)
+   Perfect score (S3=1) when first appearances of all expected phases are in strictly increasing order
+   Note: Phase revisits are allowed; only first appearance order matters
+
+Final Score = Geometric Mean(S1, S2, S3) = (S1 * S2 * S3)^(1/3)
+
+PREFIX MATCHING (asymmetric):
+- "L_reproduce_regression_test" matches expected "L_reproduce" ✓ (actual can be more specific)
+- "L_reproduce" does NOT match expected "L_reproduce_regression_test" ✗ (actual insufficient)
+
+USAGE:
+  # Single model test
+  python lang_analysis/continuous_plan_hypothesis_test.py --dataset SWE-Bench-Verified --setting plan --model deepseek_v3
+
+  # Multiple models test
+  python lang_analysis/continuous_plan_hypothesis_test.py --dataset SWE-Bench-Verified --setting plan --models model1 model2
+
+Expected Order:
+- plan: L_navigate → L_reproduce → P → V_newly_generated_test
+- no_reproduce_and_verification: L_navigate → P
+- no_verification: L_navigate → L_reproduce → P
+- plan_and_regression: L_reproduce_regression_test → L_navigate → L_reproduce_newly_generated_test → P → V_newly_generated_test → V_regression_test
+- plan_reminded: L_navigate → L_reproduce → P → V_newly_generated_test
+- plan_reordered: L_navigate → P → V_newly_generated_test
+
+OUTPUT:
+- Single model: artifacts/{dataset}/{setting}/{model}/stats/continuous_plan_test/{dataset}_{setting}_{model}_scores.txt
+- Multi model: artifacts/{dataset}/{setting}/stats/continuous_plan_test/{dataset}_{setting}_aggregated_scores.txt
+- Includes: mean scores by resolution status, score distributions, detailed breakdowns
+"""
+
+from __future__ import annotations
+import json
+import math
+from pathlib import Path
+from typing import List, Tuple, Optional, Dict
+from dataclasses import dataclass
+import numpy as np
+
+
+@dataclass
+class PlanTestConfig:
+    """Configuration for continuous plan hypothesis test."""
+    dataset: str = "SWE-Bench-Verified"
+    agent: str = "SWE-agent"
+    models: Optional[List[str]] = None
+    setting: str = "plan"
+    data_dir: str = "artifacts"
+    expected_order: Tuple[str, ...] = ("L_navigate", "L_reproduce", "P", "V_newly_generated_test")
+
+
+@dataclass
+class ComplianceScore:
+    """Compliance score breakdown."""
+    s1_vocabulary: float  # Vocabulary deviation score
+    s2_coverage: float    # Required production coverage score
+    s3_order: float       # Order conformance score
+    final_score: float    # Geometric mean of S1, S2, S3
+
+    # Detailed breakdown
+    num_expected_phases: int
+    num_extra_phases: int
+    num_required_seen: int
+    num_required_total: int
+    lcs_length: int
+    expected_length: int
+
+
+# Setting to expected order mapping
+SETTING_TO_EXPECTED_ORDER = {
+    "plan": ("L_navigate", "L_reproduce", "P", "V_newly_generated_test"),
+    "plan_and_summary": ("L_navigate", "L_reproduce", "P", "V_newly_generated_test"),
+    "no_reproduce": ("L_navigate", "P", "V_newly_generated_test"),
+    "no_validation": ("L_navigate", "L_reproduce", "P"),
+    "plan_and_regression": ("L_reproduce_regression_test", "L_navigate", "L_reproduce_newly_generated_test", "P", "V_newly_generated_test", "V_regression_test"),
+    "plan_reminded": ("L_navigate", "L_reproduce", "P", "V_newly_generated_test"),
+    "plan_reordered": ("L_navigate", "P", "V_newly_generated_test"),
+}
+
+
+def extract_phase_prefix(lang_item: str) -> str:
+    """
+    Extract phase prefix from language item (e.g., 'L_navigate_2' -> 'L_navigate').
+
+    Args:
+        lang_item: Language item from trajectory (e.g., 'L_navigate_2', 'P_1')
+
+    Returns:
+        Phase prefix without run-length suffix
+    """
+    parts = lang_item.rsplit('_', 1)
+    if len(parts) == 2 and parts[1].isdigit():
+        return parts[0]
+    return lang_item
+
+
+def phase_matches_expected(actual_phase: str, expected_phase: str) -> bool:
+    """
+    Check if an actual phase matches an expected phase using prefix matching.
+
+    Prefix matching rule (asymmetric):
+    - Exact match: actual_phase == expected_phase ✓
+    - Prefix match: actual_phase starts with expected_phase + "_" ✓
+    - Reverse does NOT work: "L_reproduce" does NOT match "L_reproduce_regression_test"
+
+    Args:
+        actual_phase: Phase from languatory
+        expected_phase: Phase from expected_order
+
+    Returns:
+        True if actual_phase satisfies the expected_phase requirement
+    """
+    if actual_phase == expected_phase:
+        return True
+    return actual_phase.startswith(expected_phase + "_")
+
+
+def extract_phase_sequence(languatory: List[str]) -> List[str]:
+    """
+    Extract ordered sequence of distinct phases from languatory.
+
+    Args:
+        languatory: List of language items with run-length suffixes
+
+    Returns:
+        Ordered list of phase prefixes (preserves order, keeps duplicates)
+    """
+    return [extract_phase_prefix(item) for item in languatory]
+
+
+def compute_longest_increasing_subsequence_length(
+    first_appearances: Dict[str, int],
+    expected_order: Tuple[str, ...]
+) -> int:
+    """
+    Compute longest subsequence of expected phases with strictly increasing first appearances.
+
+    This checks if the first appearances of expected phases conform to the expected order,
+    allowing phase revisits (only first appearance matters).
+
+    Args:
+        first_appearances: Mapping from phase to its first appearance index
+        expected_order: Expected phase order
+
+    Returns:
+        Length of longest subsequence with increasing first appearances
+    """
+    # Extract first appearance indices for expected phases (None if missing)
+    indices = []
+    for expected_phase in expected_order:
+        found_idx = None
+        for actual_phase, idx in first_appearances.items():
+            if phase_matches_expected(actual_phase, expected_phase):
+                if found_idx is None or idx < found_idx:
+                    found_idx = idx
+        indices.append(found_idx)
+
+    # Find longest increasing subsequence (LIS) among non-None indices
+    # dp[i] = length of longest increasing subsequence ending at position i
+    n = len(indices)
+    if n == 0:
+        return 0
+
+    dp = [0] * n
+    for i in range(n):
+        if indices[i] is not None:
+            dp[i] = 1  # At minimum, the phase itself
+            for j in range(i):
+                if indices[j] is not None and indices[j] < indices[i]:
+                    dp[i] = max(dp[i], dp[j] + 1)
+
+    return max(dp) if dp else 0
+
+
+def extract_first_appearances(languatory: List[str]) -> Dict[str, int]:
+    """
+    Extract first appearance indices for each unique phase, accounting for run lengths.
+
+    Args:
+        languatory: List of language items with run-length suffixes
+
+    Returns:
+        Dictionary mapping phase prefix to its cumulative first appearance index
+    """
+    first_appearances = {}
+    cumulative_idx = 0
+
+    for item in languatory:
+        phase = extract_phase_prefix(item)
+
+        # Extract run length from suffix
+        parts = item.rsplit('_', 1)
+        run_length = int(parts[1]) if len(parts) == 2 and parts[1].isdigit() else 1
+
+        if phase not in first_appearances:
+            first_appearances[phase] = cumulative_idx
+
+        cumulative_idx += run_length
+
+    return first_appearances
+
+
+def compute_compliance_score(
+    languatory: List[str],
+    expected_order: Tuple[str, ...]
+) -> ComplianceScore:
+    """
+    Compute continuous compliance score for a trajectory.
+
+    Args:
+        languatory: Trajectory language items
+        expected_order: Expected phase order
+
+    Returns:
+        ComplianceScore object with detailed breakdown
+    """
+    # Extract phase information
+    phase_sequence = extract_phase_sequence(languatory)
+    distinct_phases = set(phase_sequence)
+    first_appearances = extract_first_appearances(languatory)
+
+    # S1: Vocabulary Deviation
+    # Count extra phases (not matching any expected phase)
+    extra_phases = set()
+    for phase in distinct_phases:
+        is_expected = any(phase_matches_expected(phase, exp) for exp in expected_order)
+        if not is_expected:
+            extra_phases.add(phase)
+
+    m = len(expected_order)  # Number of expected distinct phases
+    num_extra = len(extra_phases)
+    s1_vocabulary = m / (m + num_extra) if (m + num_extra) > 0 else 0.0
+
+    # S2: Required Production Coverage (recall)
+    # Count how many expected phases appear in the trajectory
+    required_seen = set()
+    for expected_phase in expected_order:
+        for actual_phase in distinct_phases:
+            if phase_matches_expected(actual_phase, expected_phase):
+                required_seen.add(expected_phase)
+                break
+
+    num_required_seen = len(required_seen)
+    num_required_total = len(expected_order)
+    s2_coverage = num_required_seen / num_required_total if num_required_total > 0 else 0.0
+
+    # S3: Order Conformance (based on first appearances)
+    # Find longest subsequence of expected phases with increasing first appearances
+    lis_length = compute_longest_increasing_subsequence_length(first_appearances, expected_order)
+    expected_length = len(expected_order)
+    s3_order = lis_length / expected_length if expected_length > 0 else 0.0
+
+    # Final Score: Geometric Mean
+    if s1_vocabulary > 0 and s2_coverage > 0 and s3_order > 0:
+        final_score = (s1_vocabulary * s2_coverage * s3_order) ** (1/3)
+    else:
+        final_score = 0.0
+
+    return ComplianceScore(
+        s1_vocabulary=s1_vocabulary,
+        s2_coverage=s2_coverage,
+        s3_order=s3_order,
+        final_score=final_score,
+        num_expected_phases=m,
+        num_extra_phases=num_extra,
+        num_required_seen=num_required_seen,
+        num_required_total=num_required_total,
+        lcs_length=lis_length,
+        expected_length=expected_length
+    )
+
+
+def test_model(
+    dataset: str,
+    agent: str,
+    model: str,
+    setting: str,
+    data_dir: str,
+    expected_order: Tuple[str, ...]
+) -> Dict[str, any]:
+    """
+    Test a single model's trajectories and compute compliance scores.
+
+    Args:
+        agent: Agent name (e.g., "SWE-agent")
+        model: Model name (e.g., "deepseek_v3")
+        setting: Setting name (e.g., "plan", "no_validation")
+        data_dir: Root data directory
+        expected_order: Expected phase order
+
+    Returns:
+        Dictionary containing:
+            - scores_by_resolution: Dict[str, List[ComplianceScore]]
+            - instance_scores: Dict[str, ComplianceScore]
+            - summary_stats: Dict with mean scores by resolution status
+    """
+    lang_file = Path(data_dir) / dataset / setting / model / "lang" / "languatory.json"
+
+    if not lang_file.exists():
+        raise FileNotFoundError(f"Languatory file not found: {lang_file}")
+
+    with open(lang_file, 'r') as f:
+        data = json.load(f)
+
+    scores_by_resolution = {
+        "resolved": [],
+        "unresolved": []
+    }
+    instance_scores = {}
+
+    for entry in data:
+        instance_id = entry.get("instance_id", "unknown")
+        languatory = entry.get("languatory", [])
+        resolution_status = entry.get("resolution_status", "")
+
+        # Only process resolved/unresolved
+        if resolution_status not in ["resolved", "unresolved"]:
+            continue
+
+        score = compute_compliance_score(languatory, expected_order)
+        instance_scores[instance_id] = score
+        scores_by_resolution[resolution_status].append(score)
+
+    # Compute summary statistics
+    summary_stats = {}
+    for status in ["resolved", "unresolved"]:
+        scores = scores_by_resolution[status]
+        if scores:
+            summary_stats[status] = {
+                "count": len(scores),
+                "mean_s1": np.mean([s.s1_vocabulary for s in scores]),
+                "mean_s2": np.mean([s.s2_coverage for s in scores]),
+                "mean_s3": np.mean([s.s3_order for s in scores]),
+                "mean_final": np.mean([s.final_score for s in scores]),
+                "std_final": np.std([s.final_score for s in scores]),
+                "min_final": np.min([s.final_score for s in scores]),
+                "max_final": np.max([s.final_score for s in scores]),
+            }
+        else:
+            summary_stats[status] = {
+                "count": 0,
+                "mean_s1": 0.0,
+                "mean_s2": 0.0,
+                "mean_s3": 0.0,
+                "mean_final": 0.0,
+                "std_final": 0.0,
+                "min_final": 0.0,
+                "max_final": 0.0,
+            }
+
+    return {
+        "scores_by_resolution": scores_by_resolution,
+        "instance_scores": instance_scores,
+        "summary_stats": summary_stats
+    }
+
+
+def format_results(
+    model: str,
+    expected_order: Tuple[str, ...],
+    summary_stats: Dict[str, Dict],
+    instance_scores: Dict[str, ComplianceScore],
+    top_k: int = 10
+) -> str:
+    """
+    Format test results as a readable string.
+
+    Args:
+        model: Model name
+        expected_order: Expected phase order
+        summary_stats: Summary statistics by resolution status
+        instance_scores: Individual instance scores
+        top_k: Number of top/bottom instances to show
+
+    Returns:
+        Formatted result string
+    """
+    result = []
+    result.append("=" * 80)
+    result.append(f"Continuous Plan Compliance Test: {model}")
+    result.append("=" * 80)
+    result.append("")
+    result.append(f"Expected Phase Order: {' → '.join(expected_order)}")
+    result.append("")
+
+    # Summary statistics by resolution status
+    result.append("-" * 80)
+    result.append("Mean Compliance Scores by Resolution Status:")
+    result.append("-" * 80)
+
+    for status in ["resolved", "unresolved"]:
+        if status in summary_stats:
+            stats = summary_stats[status]
+            result.append(f"\n{status.capitalize()}:")
+            result.append(f"  Count: {stats['count']}")
+            result.append(f"  Mean S1 (Vocabulary): {stats['mean_s1']:.4f}")
+            result.append(f"  Mean S2 (Coverage):   {stats['mean_s2']:.4f}")
+            result.append(f"  Mean S3 (Order):      {stats['mean_s3']:.4f}")
+            result.append(f"  Mean Final Score:     {stats['mean_final']:.4f} ± {stats['std_final']:.4f}")
+            result.append(f"  Range: [{stats['min_final']:.4f}, {stats['max_final']:.4f}]")
+
+    result.append("")
+
+    # Top performers
+    sorted_instances = sorted(
+        instance_scores.items(),
+        key=lambda x: x[1].final_score,
+        reverse=True
+    )
+
+    result.append("-" * 80)
+    result.append(f"Top {top_k} Instances by Final Score:")
+    result.append("-" * 80)
+    for i, (instance_id, score) in enumerate(sorted_instances[:top_k], 1):
+        result.append(
+            f"{i}. {instance_id}: {score.final_score:.4f} "
+            f"(S1={score.s1_vocabulary:.3f}, S2={score.s2_coverage:.3f}, S3={score.s3_order:.3f})"
+        )
+
+    result.append("")
+
+    # Bottom performers
+    result.append("-" * 80)
+    result.append(f"Bottom {top_k} Instances by Final Score:")
+    result.append("-" * 80)
+    for i, (instance_id, score) in enumerate(sorted_instances[-top_k:][::-1], 1):
+        result.append(
+            f"{i}. {instance_id}: {score.final_score:.4f} "
+            f"(S1={score.s1_vocabulary:.3f}, S2={score.s2_coverage:.3f}, S3={score.s3_order:.3f})"
+        )
+
+    result.append("")
+    result.append("=" * 80)
+
+    return "\n".join(result)
+
+
+def run_single_model_test(config: PlanTestConfig, model: str) -> None:
+    """
+    Run continuous compliance test for a single model and save results.
+
+    Args:
+        config: Test configuration
+        model: Model name to test
+    """
+    print(f"Testing model: {model}")
+
+    results = test_model(
+        config.dataset,
+        config.agent,
+        model,
+        config.setting,
+        config.data_dir,
+        config.expected_order
+    )
+
+    # Format results
+    results_text = format_results(
+        model,
+        config.expected_order,
+        results["summary_stats"],
+        results["instance_scores"]
+    )
+
+    # Print to console
+    print(results_text)
+
+    # Save to file
+    output_path = Path(config.data_dir) / config.dataset / config.setting / model / "stats" / "continuous_plan_test" / f"{config.dataset}_{config.agent}_{config.setting}_{model}_scores.txt"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_path, 'w') as f:
+        f.write(results_text)
+
+    # Save detailed scores as JSON
+    json_output_path = output_path.with_suffix('.json')
+    json_data = {
+        "model": model,
+        "expected_order": list(config.expected_order),
+        "summary_stats": results["summary_stats"],
+        "instance_scores": {
+            iid: {
+                "s1_vocabulary": score.s1_vocabulary,
+                "s2_coverage": score.s2_coverage,
+                "s3_order": score.s3_order,
+                "final_score": score.final_score,
+                "num_expected_phases": score.num_expected_phases,
+                "num_extra_phases": score.num_extra_phases,
+                "num_required_seen": score.num_required_seen,
+                "num_required_total": score.num_required_total,
+                "lcs_length": score.lcs_length,
+                "expected_length": score.expected_length,
+            }
+            for iid, score in results["instance_scores"].items()
+        }
+    }
+
+    with open(json_output_path, 'w') as f:
+        json.dump(json_data, f, indent=2)
+
+    print(f"\nResults saved to: {output_path}")
+    print(f"Detailed scores saved to: {json_output_path}")
+
+
+def run_multi_model_test(config: PlanTestConfig) -> None:
+    """
+    Run continuous compliance test for multiple models and save aggregated results.
+
+    Args:
+        config: Test configuration with models list
+    """
+    if not config.models:
+        raise ValueError("No models specified for multi-model test")
+
+    all_results = []
+    all_summary_stats = {}
+
+    for model in config.models:
+        print(f"\n{'=' * 80}")
+        print(f"Testing model: {model}")
+        print(f"{'=' * 80}\n")
+
+        try:
+            results = test_model(
+                config.dataset,
+                config.agent,
+                model,
+                config.setting,
+                config.data_dir,
+                config.expected_order
+            )
+
+            results_text = format_results(
+                model,
+                config.expected_order,
+                results["summary_stats"],
+                results["instance_scores"]
+            )
+
+            all_results.append(results_text)
+            all_summary_stats[model] = results["summary_stats"]
+            print(results_text)
+
+        except Exception as e:
+            error_msg = f"Error testing model {model}: {str(e)}"
+            print(error_msg)
+            all_results.append(error_msg)
+
+    # Save aggregated results
+    output_path = Path(config.data_dir) / config.dataset / config.setting / "stats" / "continuous_plan_test" / f"{config.dataset}_{config.agent}_{config.setting}_{model}_scores.txt"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_path, 'w') as f:
+        f.write("\n\n".join(all_results))
+
+    # Save aggregated summary stats as JSON
+    json_output_path = output_path.with_suffix('.json')
+    with open(json_output_path, 'w') as f:
+        json.dump(all_summary_stats, f, indent=2)
+
+    print(f"\n\nAggregated results saved to: {output_path}")
+    print(f"Aggregated summary stats saved to: {json_output_path}")
+
+
+def main():
+    """Main entry point for continuous plan hypothesis testing."""
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Compute continuous compliance scores for agent trajectories"
+    )
+    parser.add_argument(
+        "--dataset",
+        type=str,
+        default="SWE-Bench-Verified",
+        help="Benchmark (default: SWE-Bench-Verified)"
+    )
+    parser.add_argument(
+        "--agent",
+        type=str,
+        default="SWE-agent",
+        help="Agent name (default: SWE-agent)"
+    )
+    parser.add_argument(
+        "--model",
+        type=str,
+        help="Single model to test (e.g., deepseek_v3)"
+    )
+    parser.add_argument(
+        "--models",
+        type=str,
+        nargs="+",
+        help="Multiple models to test"
+    )
+    parser.add_argument(
+        "--setting",
+        type=str,
+        default="plan",
+        choices=["plan", "no_reproduce_and_verification", "no_validation", "plan_and_regression", "plan_reminded", "plan_reordered", "plan_and_summary"],
+        help="Setting name (default: plan)"
+    )
+    parser.add_argument(
+        "--data-dir",
+        type=str,
+        default="artifacts",
+        help="Root data directory (default: artifacts)"
+    )
+    parser.add_argument(
+        "--expected-order",
+        type=str,
+        nargs="+",
+        default=None,
+        help="Expected phase order (overrides default from setting)"
+    )
+
+    args = parser.parse_args()
+
+    # Determine expected order
+    if args.expected_order:
+        expected_order = tuple(args.expected_order)
+    else:
+        expected_order = SETTING_TO_EXPECTED_ORDER[args.setting]
+
+    config = PlanTestConfig(
+        dataset=args.dataset,
+        agent=args.agent,
+        models=args.models,
+        setting=args.setting,
+        data_dir=args.data_dir,
+        expected_order=expected_order
+    )
+
+    if args.model:
+        # Single model test
+        run_single_model_test(config, args.model)
+    elif args.models:
+        # Multi-model test
+        run_multi_model_test(config)
+    else:
+        # Auto-detect all models
+        setting_dir = Path(args.data_dir) / args.dataset / args.setting
+        if setting_dir.exists():
+            models = [d.name for d in setting_dir.iterdir() if d.is_dir()]
+            if models:
+                print(f"Auto-detected models: {', '.join(models)}")
+                config.models = models
+                run_multi_model_test(config)
+            else:
+                print("No models found. Please specify --model or --models.")
+        else:
+            print(f"Directory not found: {setting_dir}")
+            print("Please specify --model or --models.")
+
+
+if __name__ == "__main__":
+    main()

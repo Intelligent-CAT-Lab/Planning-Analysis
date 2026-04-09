@@ -1,0 +1,15 @@
+Found 1 files
+
+=== Per Difficulty Category ===
+                  node_count  step_count  loop_count  longest_path
+debug_difficulty                                                  
+over4h              1.000000    4.000000    1.000000      0.000000
+under15min          1.792746    4.922280    1.227979      0.715026
+under1h             1.601533    4.727969    1.164751      0.559387
+under4h             1.357143    4.357143    1.047619      0.357143
+
+=== Overall ===
+node_count      1.651303
+step_count      4.767535
+loop_count      1.178357
+longest_path    0.599198

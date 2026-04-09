@@ -1,0 +1,13 @@
+Stratified Sample Summary
+==================================================
+
+Total instances: 101
+
+resolved_easy: 20
+unresolved_easy: 20
+resolved_medium: 20
+unresolved_medium: 20
+resolved_hard: 0
+unresolved_hard: 20
+resolved_very_hard: 0
+unresolved_very_hard: 1
