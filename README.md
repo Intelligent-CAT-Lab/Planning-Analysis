@@ -1,4 +1,4 @@
-# From Plan to Action: How Well Do Agents Follow the Plan?
+# Evaluating Plan Compliance in Autonomous Programming Agents
 
 A large-scale empirical study of **plan compliance in programming agents**, analyzing 16,991 trajectories across four LLMs, two benchmarks, and eight plan settings.
 
