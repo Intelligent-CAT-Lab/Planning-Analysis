@@ -54,7 +54,8 @@ TEST_HINTS: Tuple[str, ...] = (
 READONLY_CMDS: Tuple[str, ...] = (
     "grep", "find", "cat", "ls", "head", "tail", "awk", "nl"
 )
-EDIT_CMDS: Tuple[str, ...] = ("sed", "touch")
+# Note: sed and perl handled explicitly below based on their flags
+EDIT_CMDS: Tuple[str, ...] = ("touch",)
 SRE_EDIT_SUBCMDS: Tuple[str, ...] = ("create", "str_replace", "insert", "undo_edit")
 SRE_READONLY_SUBCMDS: Tuple[str, ...] = ("view",)
 PY_CMDS: Tuple[str, ...] = ("python", "python3", "python2", "pytest", "pylint")
@@ -568,8 +569,12 @@ def get_action_role(
 
     # 2) Python / pytest / pylint / etc.
     if cmd in PY_CMDS:
+        # For heredocs, check inline code first before treating as redirection
+        is_heredoc = flags.get("__heredoc__", False)
+
         # Check for output redirection (python ... > file)
-        if _contains_redirection(tokens):
+        # BUT: skip heredocs - they need inline code analysis first
+        if _contains_redirection(tokens) and not is_heredoc:
             redir_targets = _paths_after_redirection(tokens)
             _record_created_tests(redir_targets, created_tests)
             phase = "V" if has_patch else "L_reproduce"
@@ -667,8 +672,13 @@ def get_action_role(
                 )
             return "general"
 
-    # 3) Read-only commands
-    if cmd in READONLY_CMDS:
+    # 3) Read-only commands (including sed -n, perl -n/-p without -i)
+    is_sed_readonly = (cmd == "sed" and "i" not in flags and "n" in flags)
+    # perl -n/-p without -i and with file args = readonly viewing
+    is_perl_readonly = (cmd == "perl" and "i" not in flags and
+                        ("n" in flags or "p" in flags) and paths)
+
+    if cmd in READONLY_CMDS or is_sed_readonly or is_perl_readonly:
         if _is_piped_readonly_operation(cmd, tokens):
             test_targets = [p for p in paths if _is_test_path(p)]
             if test_targets:
@@ -708,8 +718,24 @@ def get_action_role(
             )
         return "L_navigate"
 
-    # 4) Edit/creation commands like sed/touch
-    if cmd in EDIT_CMDS or cmd == "sed":
+    # 3.5) perl test execution (perl script.pl where script is test-related)
+    if cmd == "perl" and "i" not in flags:
+        # Not in-place editing, not readonly viewing (already handled)
+        # Check if executing test-related scripts
+        test_targets = [p for p in paths if _is_test_path(p)]
+        if test_targets:
+            phase = "V" if has_patch else "L_reproduce"
+            return _classify_test_interaction(
+                test_targets,
+                created_tests=created_tests,
+                dynamic_key=None,
+                created_dynamic_suites=created_dynamic_suites,
+                phase_prefix=phase,
+            )
+
+    # 4) Edit/creation commands like sed/touch/perl -i (but not sed -n which is readonly)
+    is_perl_edit = (cmd == "perl" and "i" in flags)
+    if cmd in EDIT_CMDS or (cmd == "sed" and "i" in flags) or is_perl_edit:
         edit_targets = [p for p in paths if _is_test_path(p)]
         if edit_targets:
             phase = "V" if has_patch else "L_reproduce"
