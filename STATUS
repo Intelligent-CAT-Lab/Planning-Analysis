@@ -1,0 +1,21 @@
+# STATUS
+
+We apply for the following ACM badges:
+
+## Artifacts Available
+The artifact is permanently archived on Zenodo with DOI
+10.5281/zenodo.19339901, publicly accessible without registration,
+and released under the MIT license.
+
+## Artifacts Reusable
+Beyond reproducing the paper's results, the artifact is structured
+for reuse:
+- The plan compliance metrics (PPC, POC, PPF, PC) are implemented
+  as a standalone installable Python package applicable to any
+  SWE-agent trajectory, not just our dataset.
+- All 16,991 raw trajectories are shipped in documented JSON format,
+  enabling new analyses beyond plan compliance.
+- The eight plan-setting configs (plan-settings/) can be dropped
+  into SWE-agent to run new experiments with other models.
+- A Docker image, smoke test, per-figure reproduction commands, and
+  pinned dependencies ensure long-term executability.
