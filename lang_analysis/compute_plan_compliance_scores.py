@@ -1,19 +1,19 @@
 """
-Continuous Plan Hypothesis Test: Compute numeric compliance scores for agent trajectories.
+Plan compliance score computation: 
 
 CORE LOGIC:
-Computes a continuous compliance score (0 to 1) based on three components:
+Computes a continuous plan compliance (PC) score (0 to 1) based on three components:
 
-1. S1 - Vocabulary Deviation (extra terminal types):
+1. S1 - Plan Phase Fidelity (PPF):
    S1 = m / (m + |X|)
    where m = number of distinct expected phases, X = set of distinct out-of-alphabet phases
    Perfect score (S1=1) when no extra phase types exist
 
-2. S2 - Required Production Coverage (recall):
+2. S2 - Plan Phase Compliance (PPC):
    S2 = (required symbols seen) / (required symbols)
    Perfect score (S2=1) when all expected phases appear
 
-3. S3 - Order Conformance (based on first appearances):
+3. S3 - Plan Order Compliance (POC):
    S3 = (longest increasing subsequence of first appearances) / (expected phase sequence length)
    Perfect score (S3=1) when first appearances of all expected phases are in strictly increasing order
    Note: Phase revisits are allowed; only first appearance order matters
@@ -26,10 +26,10 @@ PREFIX MATCHING (asymmetric):
 
 USAGE:
   # Single model test
-  python lang_analysis/continuous_plan_hypothesis_test.py --dataset SWE-Bench-Verified --setting plan --model deepseek_v3
+  python lang_analysis/plan_compliance_scores.py --dataset SWE-Bench-Verified --setting plan --model deepseek_v3
 
   # Multiple models test
-  python lang_analysis/continuous_plan_hypothesis_test.py --dataset SWE-Bench-Verified --setting plan --models model1 model2
+  python lang_analysis/plan_compliance_scores.py --dataset SWE-Bench-Verified --setting plan --models model1 model2
 
 Expected Order:
 - plan: L_navigate → L_reproduce → P → V_newly_generated_test
@@ -40,8 +40,8 @@ Expected Order:
 - plan_reordered: L_navigate → P → V_newly_generated_test
 
 OUTPUT:
-- Single model: artifacts/{dataset}/{setting}/{model}/stats/continuous_plan_test/{dataset}_{setting}_{model}_scores.txt
-- Multi model: artifacts/{dataset}/{setting}/stats/continuous_plan_test/{dataset}_{setting}_aggregated_scores.txt
+- Single model: artifacts/{dataset}/{setting}/{model}/stats/plan_compliance_scores/{dataset}_{setting}_{model}_scores.txt
+- Multi model: artifacts/{dataset}/{setting}/stats/plan_compliance_scores/{dataset}_{setting}_aggregated_scores.txt
 - Includes: mean scores by resolution status, score distributions, detailed breakdowns
 """
 
@@ -56,7 +56,7 @@ import numpy as np
 
 @dataclass
 class PlanTestConfig:
-    """Configuration for continuous plan hypothesis test."""
+    """Configuration for plan compliance score computation."""
     dataset: str = "SWE-Bench-Verified"
     agent: str = "SWE-agent"
     models: Optional[List[str]] = None
@@ -68,9 +68,9 @@ class PlanTestConfig:
 @dataclass
 class ComplianceScore:
     """Compliance score breakdown."""
-    s1_vocabulary: float  # Vocabulary deviation score
-    s2_coverage: float    # Required production coverage score
-    s3_order: float       # Order conformance score
+    s1_vocabulary: float  # Plan phase fidelity score
+    s2_coverage: float    # Plan phase compliance score
+    s3_order: float       # Plan order compliance score
     final_score: float    # Geometric mean of S1, S2, S3
 
     # Detailed breakdown
@@ -235,7 +235,7 @@ def compute_compliance_score(
     distinct_phases = set(phase_sequence)
     first_appearances = extract_first_appearances(languatory)
 
-    # S1: Vocabulary Deviation
+    # S1: Plan Phase Fidelity
     # Count extra phases (not matching any expected phase)
     extra_phases = set()
     for phase in distinct_phases:
@@ -247,7 +247,7 @@ def compute_compliance_score(
     num_extra = len(extra_phases)
     s1_vocabulary = m / (m + num_extra) if (m + num_extra) > 0 else 0.0
 
-    # S2: Required Production Coverage (recall)
+    # S2: Plan Phase Compliance
     # Count how many expected phases appear in the trajectory
     required_seen = set()
     for expected_phase in expected_order:
@@ -260,7 +260,7 @@ def compute_compliance_score(
     num_required_total = len(expected_order)
     s2_coverage = num_required_seen / num_required_total if num_required_total > 0 else 0.0
 
-    # S3: Order Conformance (based on first appearances)
+    # S3: Plan Order Compliance (based on first appearances)
     # Find longest subsequence of expected phases with increasing first appearances
     lis_length = compute_longest_increasing_subsequence_length(first_appearances, expected_order)
     expected_length = len(expected_order)
@@ -453,7 +453,7 @@ def format_results(
 
 def run_single_model_test(config: PlanTestConfig, model: str) -> None:
     """
-    Run continuous compliance test for a single model and save results.
+    Run plan compliance score computation for a single model and save results.
 
     Args:
         config: Test configuration
@@ -520,7 +520,7 @@ def run_single_model_test(config: PlanTestConfig, model: str) -> None:
 
 def run_multi_model_test(config: PlanTestConfig) -> None:
     """
-    Run continuous compliance test for multiple models and save aggregated results.
+    Run plan compliance score computation for multiple models and save aggregated results.
 
     Args:
         config: Test configuration with models list
@@ -579,11 +579,11 @@ def run_multi_model_test(config: PlanTestConfig) -> None:
 
 
 def main():
-    """Main entry point for continuous plan hypothesis testing."""
+    """Main entry point for plan compliance score computation."""
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Compute continuous compliance scores for agent trajectories"
+        description="Compute plan compliance scores for agent trajectories"
     )
     parser.add_argument(
         "--dataset",

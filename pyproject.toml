@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "planning-analysis"
+version = "0.1.0"
+description = "Plan-compliance analysis tools for autonomous programming-agent trajectories."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = [
+    "agent-trajectories",
+    "plan-compliance",
+    "swe-agents",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "bashlex",
+    "gsppy",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pandas",
+    "PyYAML",
+    "scipy",
+]
+
+[project.optional-dependencies]
+graph-difficulty = ["datasets"]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.urls]
+Repository = "https://github.com/Intelligent-CAT-Lab/Planning-Analysis.git"
+
+[tool.setuptools.packages.find]
+include = [
+    "graph_construction",
+    "lang_analysis",
+    "lang_construction",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

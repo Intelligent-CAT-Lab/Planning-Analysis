@@ -74,7 +74,7 @@ All experiments use [**SWE-agent**](https://github.com/SWE-agent/SWE-agent) at c
 - **[`raw_trajectories/`](raw_trajectories/)** - Raw trajectory data from all 16,991 runs across four models, two benchmarks, and eight plan settings.
 - **[`artifacts/`](artifacts/)** - All plots, figures, and analysis reported in the paper.
 - **[`plan-settings`](plan-settings)** - SWE-agent YAML configuration files corresponding to each plan settings.
-- **[`lang_analysis/`](lang_analysis/continuous_plan_hypothesis_test.py)** - Implementation of plan compliance metrics (PPC, POC, PPF, PC).
+- **[`lang_analysis/`](lang_analysis/compute_plan_compliance_scores.py)** - Implementation of plan compliance metrics (PPC, POC, PPF, PC).
 
 ---
 
@@ -83,7 +83,7 @@ All experiments use [**SWE-agent**](https://github.com/SWE-agent/SWE-agent) at c
 ### Compute Plan Compliance
 
 ```bash
-python lang_analysis/continuous_plan_hypothesis_test.py \
+python lang_analysis/compute_plan_compliance_score.py \
     --dataset BENCHMARK --setting SETTING --model MODEL
 ```
 
