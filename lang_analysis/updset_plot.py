@@ -312,7 +312,7 @@ def main():
     ap.add_argument("setting_b", help="Second setting (other axis)")
     ap.add_argument("--root", default="artifacts", help="Root dir (default: artifacts)")
     ap.add_argument("--benchmark", default=BENCHMARK)
-    ap.add_argument("--out", default="output/upset_combined.png")
+    ap.add_argument("--out", default="output")
     ap.add_argument("--name-a", default=None, help="Label for setting A axis")
     ap.add_argument("--name-b", default=None, help="Label for setting B axis")
     args = ap.parse_args()
@@ -363,7 +363,7 @@ def main():
 
     plt.subplots_adjust(wspace=0.02, left=0.01, right=0.99, bottom=0.08)
 
-    out = Path(args.out)
+    out = Path(f"{args.out}/upset_{args.setting_b}.png")
     out.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(out, dpi=300, bbox_inches="tight", pad_inches=0.1)
     plt.close(fig)
