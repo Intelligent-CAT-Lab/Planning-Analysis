@@ -31,6 +31,9 @@ USAGE:
   # Multiple models test
   python lang_analysis/plan_compliance_scores.py --dataset SWE-Bench-Verified --setting plan --models model1 model2
 
+  # All datasets, all settings, all models (omit args)
+  python lang_analysis/plan_compliance_scores.py
+
 Expected Order:
 - plan: L_navigate → L_reproduce → P → V_newly_generated_test
 - no_reproduce_and_verification: L_navigate → P
@@ -52,6 +55,11 @@ from pathlib import Path
 from typing import List, Tuple, Optional, Dict
 from dataclasses import dataclass
 import numpy as np
+
+
+# All possible values (used when a corresponding CLI arg is omitted)
+ALL_DATASETS = ["SWE-Bench-Verified", "SWE-Bench_Pro"]
+DEFAULT_MODELS = ["deepseek_r1", "deepseek_v3", "devstral", "gpt5_mini"]
 
 
 @dataclass
@@ -313,7 +321,7 @@ def test_model(
     lang_file = Path(data_dir) / dataset / setting / model / "lang" / "languatory.json"
 
     if not lang_file.exists():
-        raise FileNotFoundError(f"Languatory file not found: {lang_file}")
+        return None
 
     with open(lang_file, 'r') as f:
         data = json.load(f)
@@ -470,6 +478,10 @@ def run_single_model_test(config: PlanTestConfig, model: str) -> None:
         config.expected_order
     )
 
+    if results is None:
+        print(f"  Skipping {config.dataset}/{config.setting}/{model}: languatory file not found")
+        return
+
     # Format results
     results_text = format_results(
         model,
@@ -530,6 +542,7 @@ def run_multi_model_test(config: PlanTestConfig) -> None:
 
     all_results = []
     all_summary_stats = {}
+    last_model = None
 
     for model in config.models:
         print(f"\n{'=' * 80}")
@@ -546,6 +559,9 @@ def run_multi_model_test(config: PlanTestConfig) -> None:
                 config.expected_order
             )
 
+            if results is None:
+                continue
+
             results_text = format_results(
                 model,
                 config.expected_order,
@@ -555,6 +571,7 @@ def run_multi_model_test(config: PlanTestConfig) -> None:
 
             all_results.append(results_text)
             all_summary_stats[model] = results["summary_stats"]
+            last_model = model
             print(results_text)
 
         except Exception as e:
@@ -562,8 +579,12 @@ def run_multi_model_test(config: PlanTestConfig) -> None:
             print(error_msg)
             all_results.append(error_msg)
 
+    if not all_summary_stats:
+        print(f"No results for {config.dataset}/{config.setting} (no matching models).")
+        return
+
     # Save aggregated results
-    output_path = Path(config.data_dir) / config.dataset / config.setting / "stats" / "continuous_plan_test" / f"{config.dataset}_{config.agent}_{config.setting}_{model}_scores.txt"
+    output_path = Path(config.data_dir) / config.dataset / config.setting / "stats" / "continuous_plan_test" / f"{config.dataset}_{config.agent}_{config.setting}_aggregated_scores.txt"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, 'w') as f:
@@ -578,6 +599,40 @@ def run_multi_model_test(config: PlanTestConfig) -> None:
     print(f"Aggregated summary stats saved to: {json_output_path}")
 
 
+def process_dataset_setting(args, dataset: str, setting: str) -> None:
+    """Run one (dataset, setting) combination, honoring model / models / auto-detect."""
+    # Determine expected order
+    if args.expected_order:
+        expected_order = tuple(args.expected_order)
+    else:
+        expected_order = SETTING_TO_EXPECTED_ORDER.get(setting)
+        if expected_order is None:
+            print(f"No expected order defined for setting '{setting}', skipping.")
+            return
+
+    config = PlanTestConfig(
+        dataset=dataset,
+        agent=args.agent,
+        models=args.models,
+        setting=setting,
+        data_dir=args.data_dir,
+        expected_order=expected_order,
+    )
+
+    print(f"\n{'#' * 80}")
+    print(f"# Dataset: {dataset} | Setting: {setting}")
+    print(f"{'#' * 80}")
+
+    if args.model:
+        run_single_model_test(config, args.model)
+    elif args.models:
+        run_multi_model_test(config)
+    else:
+        # Nothing passed: run each default model as a single-model test
+        for model in DEFAULT_MODELS:
+            run_single_model_test(config, model)
+
+
 def main():
     """Main entry point for plan compliance score computation."""
     import argparse
@@ -588,8 +643,9 @@ def main():
     parser.add_argument(
         "--dataset",
         type=str,
-        default="SWE-Bench-Verified",
-        help="Benchmark (default: SWE-Bench-Verified)"
+        default=None,
+        choices=ALL_DATASETS,
+        help="Benchmark. If omitted, runs for all datasets."
     )
     parser.add_argument(
         "--agent",
@@ -611,9 +667,9 @@ def main():
     parser.add_argument(
         "--setting",
         type=str,
-        default="plan",
-        choices=["plan", "no_reproduce_and_verification", "no_validation", "plan_and_regression", "plan_reminded", "plan_reordered", "plan_and_summary"],
-        help="Setting name (default: plan)"
+        default=None,
+        choices=list(SETTING_TO_EXPECTED_ORDER.keys()),
+        help="Setting name. If omitted, runs for all settings."
     )
     parser.add_argument(
         "--data-dir",
@@ -631,41 +687,18 @@ def main():
 
     args = parser.parse_args()
 
-    # Determine expected order
-    if args.expected_order:
-        expected_order = tuple(args.expected_order)
-    else:
-        expected_order = SETTING_TO_EXPECTED_ORDER[args.setting]
+    # Expand omitted dataset / setting into all possibilities
+    datasets = [args.dataset] if args.dataset else ALL_DATASETS
+    settings = [args.setting] if args.setting else list(SETTING_TO_EXPECTED_ORDER.keys())
 
-    config = PlanTestConfig(
-        dataset=args.dataset,
-        agent=args.agent,
-        models=args.models,
-        setting=args.setting,
-        data_dir=args.data_dir,
-        expected_order=expected_order
-    )
+    # Note: --expected-order only makes sense with a single explicit setting.
+    if args.expected_order and not args.setting:
+        print("Warning: --expected-order given without --setting; "
+              "it will be applied to ALL settings.")
 
-    if args.model:
-        # Single model test
-        run_single_model_test(config, args.model)
-    elif args.models:
-        # Multi-model test
-        run_multi_model_test(config)
-    else:
-        # Auto-detect all models
-        setting_dir = Path(args.data_dir) / args.dataset / args.setting
-        if setting_dir.exists():
-            models = [d.name for d in setting_dir.iterdir() if d.is_dir()]
-            if models:
-                print(f"Auto-detected models: {', '.join(models)}")
-                config.models = models
-                run_multi_model_test(config)
-            else:
-                print("No models found. Please specify --model or --models.")
-        else:
-            print(f"Directory not found: {setting_dir}")
-            print("Please specify --model or --models.")
+    for dataset in datasets:
+        for setting in settings:
+            process_dataset_setting(args, dataset, setting)
 
 
 if __name__ == "__main__":
