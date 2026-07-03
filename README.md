@@ -1,6 +1,6 @@
 # Evaluating Plan Compliance in Autonomous Programming Agents
 
-**ASE 2026 Artifact** — A large-scale empirical study of **plan compliance in programming agents**, analyzing 16,991 SWE-agent trajectories across four LLMs, two benchmarks, and eight plan settings.
+**ASE 2026 Artifact** — A large-scale empirical study of [**plan compliance in programming agents**](https://arxiv.org/abs/2604.12147), analyzing 16,991 SWE-agent trajectories across four LLMs, two benchmarks, and eight plan settings.
 
 This README follows the ASE 2026 artifact guidelines: **Part 1 — Getting Started** (installation + smoke test, ≤30 minutes) and **Part 2 — Step-by-Step Reproduction** (mapping paper claims to commands).
 
@@ -50,9 +50,9 @@ This (1) builds the `plan-study` Docker image and (2) runs three containerized j
 **Expected output:** the script exits without error and figures are (re)written on the host under `artifacts/{BENCHMARK}/{SETTING}/`, e.g.:
 
 ```
-artifacts/SWE-Bench-Verified/plan/compliance_heatmap.pdf
-artifacts/SWE-Bench-Verified/plan/upset_plan_vs_no_plan.png
-artifacts/SWE-Bench-Verified/plan/deepseek_r1/lang/…   (phase-flow diagrams)
+artifacts/SWE-Bench-Verified/no_reproduce/compliance_heatmap.pdf
+artifacts/SWE-Bench-Verified/no_reproduce/upset_plan_vs_no_reproduce.png
+artifacts/SWE-Bench-Verified/no_reproduce/deepseek_v3/lang/sa_dsk-v3_sankey.pdf
 ```
 
 Regenerated figures should match the pre-computed versions shipped in `artifacts/`.
@@ -122,8 +122,6 @@ Substitute `MODEL ∈ {gpt5-mini, deepseek-v3, deepseek-r1, devstral-small}`, `B
 | **Success-rate / resolved-set comparisons** (Findings 6, 7, 9; Figures 5, 7, 9, 12, 14, 17, 19) | `python lang_analysis/updset_plot.py --benchmark BENCHMARK plan SETTING` |
 | **Phase flow (Sankey) diagrams** (Figures 3, 4, 6, 11, 16, 21) | `python lang_analysis/sankey_lang_plot.py --lang-path artifacts/BENCHMARK/SETTING/MODEL/lang/languatory.json` |
 | **Plan compliance scores** (PPC/POC/PPF/PC, Eqs. 1–4) | `python lang_analysis/compute_plan_compliance_scores.py --dataset BENCHMARK --setting SETTING --model MODEL` |
-| **Statistical tests** (Finding 2 Mann–Whitney; RQ7 McNemar) | `python lang_analysis/plan_hypothesis_test.py --help` for options |
-| **Exclusive-resolution case analysis** (Findings 7, 9) | `python lang_analysis/case_finder.py --help` for options |
 
 Run any script with `--help` for all options.
 
@@ -156,8 +154,7 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 ### Benchmarks
 
 - **SWE-bench Verified** — 500 real-world GitHub issues (Easy / Medium / Hard)
-- **SWE-bench Pro** — 266 Python instances; 31 used for cross-model comparison (instances resolved by ≥1 LLM under the Standard plan)
-
+- **SWE-bench Pro** — 31 python instances resolved by Claude Opus 4.1, Claude Sonnet 4, and Gemini 2.5 Pro according to their [official trajectories](https://github.com/scaleapi/SWE-bench_Pro-os/tree/main/traj). We use [SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os) at commit `0c64e26
 ### Plan Settings
 
 | Setting | Plan Formulation | Variation Type | Config |
