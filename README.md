@@ -35,7 +35,7 @@ Overall score: **PC = (PPC · POC · PPF)^(1/3)**
 - **Storage:** ~4 GB total (repository incl. 1.3 GB of raw trajectories + Docker image)
 - **No GPU or API keys required.** All experiments are offline analysis of pre-recorded trajectories, fully bundled in this artifact.
 
-See `REQUIREMENTS` for details.
+See [REQUIREMENTS](REQUIREMENTS.md) for details.
 
 ## Option A — Docker (recommended): One-Command Smoke Test + Full Reproduction
 
@@ -196,8 +196,8 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 │   ├── plot_all_upsets.sh      Run INSIDE the container (or venv): all UpSet plots
 │   └── plot_all_sankey.sh      Run INSIDE the container (or venv): all phase-flow diagrams
 ├── Dockerfile
-├── REQUIREMENTS          Hardware/software requirements
-├── STATUS                Badges requested + justification
+├── REQUIREMENTS.md          Hardware/software requirements
+├── STATUS.md                Badges requested + justification
 └── LICENSE               MIT
 ```
 
