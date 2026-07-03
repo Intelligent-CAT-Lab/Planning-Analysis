@@ -33,6 +33,8 @@ dependencies = [
     "pandas",
     "PyYAML",
     "scipy",
+    "upsetplot",
+    "seaborn",
 ]
 
 [project.optional-dependencies]

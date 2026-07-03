@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 python lang_analysis/updset_plot.py --benchmark SWE-Bench-Verified plan no_plan
 python lang_analysis/updset_plot.py --benchmark SWE-Bench-Verified plan no_reproduce
