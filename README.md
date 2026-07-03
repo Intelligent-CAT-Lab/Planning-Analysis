@@ -1,6 +1,8 @@
 # Evaluating Plan Compliance in Autonomous Programming Agents
 
-A large-scale empirical study of **plan compliance in programming agents**, analyzing 16,991 trajectories across four LLMs, two benchmarks, and eight plan settings.
+**ASE 2026 Artifact** — A large-scale empirical study of **plan compliance in programming agents**, analyzing 16,991 SWE-agent trajectories across four LLMs, two benchmarks, and eight plan settings.
+
+This README follows the ASE 2026 artifact guidelines: **Part 1 — Getting Started** (installation + smoke test, ≤30 minutes) and **Part 2 — Step-by-Step Reproduction** (mapping paper claims to commands).
 
 ---
 
@@ -8,62 +10,166 @@ A large-scale empirical study of **plan compliance in programming agents**, anal
 
 LLM-based programming agents are commonly instructed to follow a task-specific plan (e.g., navigate → reproduce → patch → validate) via their system prompt. But do they actually follow it?
 
-This repository provides the artifacts for the first extensive, systematic analysis of plan compliance in programming agents. We introduce novel **plan compliance metrics**, evaluate agent behavior under diverse plan configurations, and study how plan adherence relates to task success.
+This artifact provides the data and analysis pipeline for the first extensive, systematic analysis of plan compliance in programming agents. We introduce novel **plan compliance metrics**, evaluate agent behavior under diverse plan configurations, and study how plan adherence relates to task success.
 
----
+Our analysis builds on **Graphectory** and **Langutory**, two process-centric representations introduced in [Process-Centric Analysis of Agentic Software Systems](https://arxiv.org/abs/2512.02393).
 
-## Built Upon: Process-Centric Analysis Tools
-
-Our analysis uses **Graphectory** and **Langutory**, two process-centric representations introduced by Shuyang Liu in [Process-Centric Analysis of Agentic Software Systems](https://arxiv.org/abs/2512.02393)
-
----
-
-## Plan Compliance Metrics
-
-We propose **Plan Compliance (PC)**, measured across three dimensions:
+### Plan Compliance Metrics
 
 | Metric | Description |
 |---|---|
 | **Plan Phase Compliance (PPC)** | Fraction of expected plan phases that appear in the trajectory |
 | **Plan Order Compliance (POC)** | Fraction of phases appearing in the correct relative order (via longest increasing subsequence) |
-| **Plan Phase Fidelity (PPF)** | Penalizes the appearance of phases outside the specified plan alphabet |
+| **Plan Phase Fidelity (PPF)** | Penalizes phases outside the specified plan alphabet |
 
-The overall score is the geometric mean: **PC = (PPC · POC · PPF)^(1/3)**
+Overall score: **PC = (PPC · POC · PPF)^(1/3)**
 
 ---
 
-## Experimental Setup
+# Part 1 — Getting Started (≈15 minutes)
+
+## Requirements
+
+- **OS/Arch:** Linux or macOS, x86-64 or ARM64 (tested on Ubuntu 24.04 x86-64)
+- **Software:** Docker ≥ 24 (recommended) *or* Python ≥ 3.10 with pip
+- **Storage:** ~4 GB total (repository incl. 1.3 GB of raw trajectories + Docker image)
+- **No GPU or API keys required.** All experiments are offline analysis of pre-recorded trajectories, fully bundled in this artifact.
+
+See `REQUIREMENTS` for details.
+
+## Option A — Docker (recommended): One-Command Smoke Test + Full Reproduction
+
+The image is fully self-contained: code, configs, all 16,991 raw trajectories, and pre-computed results are baked in. Because the bundled dataset is compact (1.3 GB) and all analyses run in minutes, a **single command serves as both the smoke test and the full figure reproduction**:
+
+```bash
+scripts/start_plan_study.sh
+```
+
+This (1) builds the `plan-study` Docker image and (2) runs three containerized jobs that regenerate all compliance heatmaps, all UpSet plots, and all phase-flow (Sankey) diagrams from the bundled trajectory data.
+
+**Expected output:** the script exits without error and figures are (re)written on the host under `artifacts/{BENCHMARK}/{SETTING}/`, e.g.:
+
+```
+artifacts/SWE-Bench-Verified/plan/compliance_heatmap.pdf
+artifacts/SWE-Bench-Verified/plan/upset_plan_vs_no_plan.png
+artifacts/SWE-Bench-Verified/plan/deepseek_r1/lang/…   (phase-flow diagrams)
+```
+
+Regenerated figures should match the pre-computed versions shipped in `artifacts/`.
+
+For interactive exploration inside the container:
+
+```bash
+docker run -it -v "$(pwd)/artifacts:/plan_study/artifacts" plan-study bash
+```
+
+The `artifacts/` mount makes generated figures appear on your host. Running without the mount also works; copy results out with `docker cp` afterwards.
+
+## Option B — Local install (no Docker)
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install .
+
+scripts/plot_all_heatmaps.sh
+scripts/plot_all_upsets.sh
+scripts/plot_all_sankey.sh
+```
+
+---
+
+# Part 2 — Step-by-Step Reproduction
+
+## What This Artifact Does and Does Not Reproduce
+
+**Supported:** All plan compliance metrics, statistical tests, and figures in the paper are reproducible from the bundled trajectories using the commands below.
+
+**Not supported:** Re-generating the 16,991 trajectories themselves. This requires paid model APIs (GPT-5 mini, DeepSeek, Devstral), substantial inference cost, and days of wall-clock time; results would also differ due to inherent nondeterminism (RQ7, §6.2 of the paper). Instead, we ship the exact trajectories analyzed in the paper (`raw_trajectories/`, 1.3 GB), plus the SWE-agent configuration files (`plan-settings/`) and scaffold version (commit `8089c8b`) needed to re-run generation independently.
+
+## One-Shot Reproduction Scripts
+
+Inside the container (or a local venv):
+
+```bash
+# All compliance heatmaps (Figures 2, 8, 10, 13, 15, 18, 20, 22)
+scripts/plot_all_heatmaps.sh
+
+# All UpSet plots comparing resolved-instance sets across plan settings
+# (Figures 5, 7, 9, 12, 14, 17, 19)
+scripts/plot_all_upsets.sh
+
+# All phase-flow (Sankey) diagrams (Figures 3, 4, 6, 11, 16, 21)
+scripts/plot_all_sankey.sh
+```
+
+Or as one-shot Docker jobs from the host (no interactive shell needed):
+
+```bash
+docker run --rm -v "$(pwd)/artifacts:/plan_study/artifacts" plan-study scripts/plot_all_heatmaps.sh
+docker run --rm -v "$(pwd)/artifacts:/plan_study/artifacts" plan-study scripts/plot_all_upsets.sh
+docker run --rm -v "$(pwd)/artifacts:/plan_study/artifacts" plan-study scripts/plot_all_sankey.sh
+```
+
+All scripts run in minutes on a commodity laptop and write into `artifacts/{BENCHMARK}/{SETTING}/`.
+
+## Claim → Command Mapping
+
+Substitute `MODEL ∈ {gpt5-mini, deepseek-v3, deepseek-r1, devstral-small}`, `BENCHMARK ∈ {SWE-Bench-Verified, SWE-Bench_Pro}`, `SETTING ∈ {plan, no_plan, no_reproduce, no_validation, plan_and_regression, plan_and_summary, plan_reordered, plan_reminded}`.
+
+| Paper claim | Command |
+|---|---|
+| **Compliance metric heatmaps** (RQ1–RQ6; Figures 2, 8, 10, 13, 15, 18, 20, 22) | `python lang_analysis/heatmap_plot.py --benchmark BENCHMARK --plan SETTING .` |
+| **Success-rate / resolved-set comparisons** (Findings 6, 7, 9; Figures 5, 7, 9, 12, 14, 17, 19) | `python lang_analysis/updset_plot.py --benchmark BENCHMARK plan SETTING` |
+| **Phase flow (Sankey) diagrams** (Figures 3, 4, 6, 11, 16, 21) | `python lang_analysis/sankey_lang_plot.py --lang-path artifacts/BENCHMARK/SETTING/MODEL/lang/languatory.json` |
+| **Plan compliance scores** (PPC/POC/PPF/PC, Eqs. 1–4) | `python lang_analysis/compute_plan_compliance_scores.py --dataset BENCHMARK --setting SETTING --model MODEL` |
+| **Statistical tests** (Finding 2 Mann–Whitney; RQ7 McNemar) | `python lang_analysis/plan_hypothesis_test.py --help` for options |
+| **Exclusive-resolution case analysis** (Findings 7, 9) | `python lang_analysis/case_finder.py --help` for options |
+
+Run any script with `--help` for all options.
+
+## Pre-computed Results
+
+All results reported in the paper ship under `artifacts/`, so reviewers can verify outputs without recomputation and diff freshly generated figures against them:
+
+- **Compliance heatmaps:** `artifacts/{BENCHMARK}/{SETTING}/compliance_heatmap.pdf`
+- **UpSet plots:** `artifacts/{BENCHMARK}/{SETTING}/upset_plan_vs_{SETTING}.png`
+- **Compliance metrics:** `artifacts/{BENCHMARK}/{SETTING}/{MODEL}/stats/continuous_plan_test/`
+- **Phase flow (Sankey) diagrams:** `artifacts/{BENCHMARK}/{SETTING}/{MODEL}/lang/`
+
+---
+
+## Experimental Setup (as in the paper)
 
 ### Models
 
 | Model | Type |
 |---|---|
-| GPT-5 mini | Closed-source frontier model |
+| GPT-5 mini | Closed-source frontier reasoning model |
 | DeepSeek-R1 | Open-source reasoning model |
 | DeepSeek-V3 | Open-source general-purpose model |
-| Devstral-small (24GB) | Distilled model specialized in coding |
+| Devstral-small (24B) | Distilled model specialized in coding |
 
 ### Scaffold
 
-All experiments use [**SWE-agent**](https://github.com/SWE-agent/SWE-agent) at commit `8089c8b`.
+All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agent/SWE-agent) at commit `8089c8b`, default configuration, varying only the plan section of the system prompt (`plan-settings/`).
 
 ### Benchmarks
 
 - **SWE-bench Verified** — 500 real-world GitHub issues (Easy / Medium / Hard)
-- **SWE-bench Pro** — 31 Python instances
+- **SWE-bench Pro** — 266 Python instances; 31 used for cross-model comparison (instances resolved by ≥1 LLM under the Standard plan)
 
 ### Plan Settings
 
-| Setting | Plan Formulation | Variation Type |
-|---|---|---|
-| Standard (Default) | ⟨N, R, P, V⟩ | Baseline |
-| No Plan | — | Removal |
-| No Reproduction | ⟨N, ¬R, P, V⟩ | Removal |
-| No Validation | ⟨N, R, P, ¬V⟩ | Removal |
-| + Regression Testing | ⟨RG, N, R, P, V, VG⟩ | Addition |
-| + Summary of Changes | ⟨N, R, P, V, S⟩ | Addition |
-| Reordered | ⟨N, P, R, V⟩ | Reordering |
-| Periodic Reminder | ⟨N, R, P, V⟩ (re-injected every 5 steps) | Reminder |
+| Setting | Plan Formulation | Variation Type | Config |
+|---|---|---|---|
+| Standard (Default) | ⟨N, R, P, V⟩ | Baseline | `plan-settings/plan/` |
+| No Plan | — | Reduction | `plan-settings/no_plan/` |
+| No Reproduction | ⟨N, ¬R, P, V⟩ | Reduction | `plan-settings/no_reproduce/` |
+| No Validation | ⟨N, R, P, ¬V⟩ | Reduction | `plan-settings/no_validation/` |
+| + Regression Testing | ⟨R_G, N, R, P, V, V_G⟩ | Augmentation | `plan-settings/plan_and_regression/` |
+| + Summary of Changes | ⟨N, R, P, V, S⟩ | Augmentation | `plan-settings/plan_and_summary/` |
+| Reordered | ⟨N, P, R, V⟩ | Reordering | `plan-settings/plan_reordered/` |
+| Periodic Reminder | ⟨N, R, P, V⟩ every 5 steps | Repeating | `plan-settings/plan_reminded/` |
 
 **Plan phases:** Navigation (N) · Reproduction (R) · Patch (P) · Validation (V)
 
@@ -71,36 +177,42 @@ All experiments use [**SWE-agent**](https://github.com/SWE-agent/SWE-agent) at c
 
 ## Repository Structure
 
-- **[`raw_trajectories/`](raw_trajectories/)** - Raw trajectory data from all 16,991 runs across four models, two benchmarks, and eight plan settings.
-- **[`artifacts/`](artifacts/)** - All plots, figures, and analysis reported in the paper.
-- **[`plan-settings`](plan-settings)** - SWE-agent YAML configuration files corresponding to each plan settings.
-- **[`lang_analysis/`](lang_analysis/compute_plan_compliance_scores.py)** - Implementation of plan compliance metrics (PPC, POC, PPF, PC).
+```
+.
+├── plan-settings/        SWE-agent YAML system-prompt configs, one dir per plan setting
+├── raw_trajectories/     Raw trajectory data, 16,991 runs (~1.3 GB, fully bundled)
+│   ├── SWE-Bench-Verified/
+│   └── SWE-Bench_Pro/
+├── graph_construction/   Trajectory → Graphectory (buildGraph.py, generate_graphs.py, mapPhase.py)
+├── lang_construction/    Graphectory → Langutory phase sequences (get_lang.py, mapLang.py)
+├── lang_analysis/        Metrics, statistical tests, and plotting
+│   ├── compute_plan_compliance_scores.py   PPC / POC / PPF / PC (Eqs. 1–4)
+│   ├── heatmap_plot.py                     Compliance metric heatmaps
+│   ├── updset_plot.py                      UpSet plots of resolved-instance sets
+│   ├── sankey_lang_plot.py                 Phase flow diagrams
+│   ├── plan_hypothesis_test.py             Mann–Whitney / McNemar tests
+│   └── case_finder.py                      Exclusive-resolution case analysis
+├── artifacts/            Pre-computed results: all figures, stats, Langutory files
+├── scripts/
+│   ├── start_plan_study.sh     Run on the HOST: builds the image and regenerates ALL figures
+│   ├── plot_all_heatmaps.sh    Run INSIDE the container (or venv): all compliance heatmaps
+│   ├── plot_all_upsets.sh      Run INSIDE the container (or venv): all UpSet plots
+│   └── plot_all_sankey.sh      Run INSIDE the container (or venv): all phase-flow diagrams
+├── Dockerfile
+├── REQUIREMENTS          Hardware/software requirements
+├── STATUS                Badges requested + justification
+└── LICENSE               MIT
+```
+
+### Data Schema
+
+Each raw trajectory is a JSON file (one per benchmark instance) containing the SWE-agent run: an ordered list of steps, each with the model's `thought`, the executed `action` (tool call), and the environment `observation`, plus final resolution status. Intermediate representations:
+
+- **Graphectory** (`*.graph.json`): nodes = distinct agent actions; edges = chronological execution order; includes node/edge/loop counts.
+- **Langutory** (`languatory.json`): per-instance phase sequence over the alphabet Φ = {N, R, P, V, …}, e.g. `NRRPVVVPV`, used by all compliance metrics.
 
 ---
 
-## Usage
+## License
 
-### Compute Plan Compliance
-
-```bash
-python lang_analysis/compute_plan_compliance_score.py \
-    --dataset BENCHMARK --setting SETTING --model MODEL
-```
-
-
-### Generate Phase Flow Diagrams
-
-```bash
-# outputs to same folder as languatory.json
-python lang_analysis/sankey_lang_plot.py \
-    --lang-path artifacts/DATASET/SETTING/MODEL/lang/languatory.json
-```
-
-Run with `--help` to see all available options.
-
-### Pre-computed Results
- 
-- **Compliance rates:** `artifacts/BENCHMARK/SETTING/MODEL/stats/continuous_plan_test/`
-- **Phase flow (Sankey) diagrams:** `artifacts/BENCHMARK/SETTING/MODEL/lang/`
-
----
+MIT — see `LICENSE`.
