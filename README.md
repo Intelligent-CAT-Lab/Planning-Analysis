@@ -136,6 +136,32 @@ All results reported in the paper ship under `artifacts/`, so reviewers can veri
 
 ---
 
+## Extending the Artifact: Adding a New Model or Setting
+
+The pipeline is not limited to the four models and eight settings analyzed in the paper. To evaluate an additional model or plan setting, add data in the two locations below and rerun the scripts — no code changes required.
+
+1. **Add the raw trajectories.** Place the archived trajectory data at:
+
+   ```
+   raw_trajectories/{BENCHMARK}/{SETTING}/{MODEL}/traj.7z
+   ```
+
+   where `BENCHMARK ∈ {SWE-Bench-Verified, SWE-Bench_Pro}`, `SETTING` is either one of the existing plan settings or a new one you define (see `plan-settings/` for the YAML config format), and `MODEL` is the new or existing model name.
+
+2. **Add the corresponding evaluation report.** Place the SWE-bench evaluation report JSON at:
+
+   ```
+   artifacts/{BENCHMARK}/{SETTING}/{MODEL}/report/
+   ```
+
+   This report supplies the resolution status used by the UpSet plots and success-rate comparisons.
+
+3. **Rerun the pipeline.** Re-run `scripts/start_plan_study.sh` (Docker) or the individual `scripts/plot_all_*.sh` scripts (local venv) as described in Part 1/Part 2 above. The graph/langutory construction and metric computation steps will pick up the new `{BENCHMARK}/{SETTING}/{MODEL}` combination automatically, and the corresponding heatmaps, UpSet plots, and Sankey diagrams will be (re)written under `artifacts/{BENCHMARK}/{SETTING}/`.
+
+> **Note:** A new `SETTING` should also have a matching config directory under `plan-settings/` describing its plan alphabet, since `compute_plan_compliance_scores.py` uses it to determine expected phases (PPC/POC/PPF).
+
+---
+
 ## Experimental Setup (as in the paper)
 
 ### Models
@@ -154,7 +180,8 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 ### Benchmarks
 
 - **SWE-bench Verified** — 500 real-world GitHub issues (Easy / Medium / Hard)
-- **SWE-bench Pro** — 31 python instances resolved by Claude Opus 4.1, Claude Sonnet 4, and Gemini 2.5 Pro according to their [official trajectories](https://github.com/scaleapi/SWE-bench_Pro-os/tree/main/traj). We use [SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os) at commit `0c64e26
+- **SWE-bench Pro** — 31 python instances resolved by Claude Opus 4.1, Claude Sonnet 4, and Gemini 2.5 Pro according to their [official trajectories](https://github.com/scaleapi/SWE-bench_Pro-os/tree/main/traj). We use [SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os) at commit `0c64e26`.
+
 ### Plan Settings
 
 | Setting | Plan Formulation | Variation Type | Config |
