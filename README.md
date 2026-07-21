@@ -1,6 +1,6 @@
 # Evaluating Plan Compliance in Autonomous Programming Agents
 
-**ASE 2026 Artifact** — A large-scale empirical study of [**plan compliance in programming agents**](https://arxiv.org/abs/2604.12147), analyzing 16,991 SWE-agent trajectories across four LLMs, two benchmarks, and eight plan settings.
+**ASE 2026 Artifact** — A large-scale empirical study of [**plan compliance in programming agents**](https://arxiv.org/abs/2604.12147), analyzing 21,120 SWE-agent trajectories across four LLMs, two benchmarks, and eight plan settings.
 
 This README follows the ASE 2026 artifact guidelines: **Part 1 — Getting Started** (installation + smoke test, ≤30 minutes) and **Part 2 — Step-by-Step Reproduction** (mapping paper claims to commands).
 
@@ -39,7 +39,7 @@ See [REQUIREMENTS](REQUIREMENTS.md) for details.
 
 ## Option A — Docker (recommended): One-Command Smoke Test + Full Reproduction
 
-The image is fully self-contained: code, configs, all 16,991 raw trajectories, and pre-computed results are baked in. Because the bundled dataset is compact (1.3 GB) and all analyses run in minutes, a **single command serves as both the smoke test and the full figure reproduction**:
+The image is fully self-contained: code, configs, all 21,120 raw trajectories, and pre-computed results are baked in. Because the bundled dataset is compact (1.3 GB) and all analyses run in minutes, a **single command serves as both the smoke test and the full figure reproduction**:
 
 ```bash
 scripts/start_plan_study.sh
@@ -84,7 +84,7 @@ scripts/plot_all_sankey.sh
 
 **Supported:** All plan compliance metrics, statistical tests, and figures in the paper are reproducible from the bundled trajectories using the commands below.
 
-**Not supported:** Re-generating the 16,991 trajectories themselves. This requires paid model APIs (GPT-5 mini, DeepSeek, Devstral), substantial inference cost, and days of wall-clock time; results would also differ due to inherent nondeterminism (RQ7, §6.2 of the paper). Instead, we ship the exact trajectories analyzed in the paper (`raw_trajectories/`, 1.3 GB), plus the SWE-agent configuration files (`plan-settings/`) and scaffold version (commit `8089c8b`) needed to re-run generation independently.
+**Not supported:** Re-generating the 21,120 trajectories themselves. This requires paid model APIs (GPT-5 mini, DeepSeek, Devstral), substantial inference cost, and days of wall-clock time; results would also differ due to inherent nondeterminism (RQ7, §6.2 of the paper). Instead, we ship the exact trajectories analyzed in the paper (`raw_trajectories/`, 1.3 GB), plus the SWE-agent configuration files (`plan-settings/`) and scaffold version (commit `8089c8b`) needed to re-run generation independently.
 
 ## One-Shot Reproduction Scripts
 
@@ -204,7 +204,7 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 ```
 .
 ├── plan-settings/        SWE-agent YAML system-prompt configs, one dir per plan setting
-├── raw_trajectories/     Raw trajectory data, 16,991 runs (~1.3 GB, fully bundled)
+├── raw_trajectories/     Raw trajectory data, 21,120 runs (~1.3 GB, fully bundled)
 │   ├── SWE-Bench-Verified/
 │   └── SWE-Bench_Pro/
 ├── graph_construction/   Trajectory → Graphectory (buildGraph.py, generate_graphs.py, mapPhase.py)
