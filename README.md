@@ -207,15 +207,14 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 ├── raw_trajectories/     Raw trajectory data, 21,120 runs (~1.3 GB, fully bundled)
 │   ├── SWE-Bench-Verified/
 │   └── SWE-Bench_Pro/
-├── graph_construction/   Trajectory → Graphectory (buildGraph.py, generate_graphs.py, mapPhase.py)
-├── lang_construction/    Graphectory → Langutory phase sequences (get_lang.py, mapLang.py)
+├── graph_construction/   Trajectory → Graphectory (buildGraph.py)
+├── lang_construction/    Graphectory → Langutory phase sequences (mapLang.py, get_Lang.py)
 ├── lang_analysis/        Metrics, statistical tests, and plotting
-│   ├── compute_plan_compliance_scores.py   PPC / POC / PPF / PC (Eqs. 1–4)
+│   ├── compute_plan_compliance_scores.py   Compute PPC / POC / PPF / PC (Eqs. 1–4)
 │   ├── heatmap_plot.py                     Compliance metric heatmaps
 │   ├── updset_plot.py                      UpSet plots of resolved-instance sets
 │   ├── sankey_lang_plot.py                 Phase flow diagrams
-│   ├── plan_hypothesis_test.py             Mann–Whitney / McNemar tests
-│   └── case_finder.py                      Exclusive-resolution case analysis
+│   └── plan_hypothesis_test.py             Mann–Whitney / McNemar tests
 ├── artifacts/            Pre-computed results: all figures, stats, Langutory files
 ├── scripts/
 │   ├── start_plan_study.sh     Run on the HOST: builds the image and regenerates ALL figures
@@ -230,9 +229,9 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 
 ### Data Schema
 
-Each raw trajectory is a JSON file (one per benchmark instance) containing the SWE-agent run: an ordered list of steps, each with the model's `thought`, the executed `action` (tool call), and the environment `observation`, plus final resolution status. Intermediate representations:
+Each raw trajectory is a JSON file (one per benchmark instance) containing the SWE-agent run: an ordered list of steps, each with the model's `thought`, the executed `action` (tool call), and the environment `observation`. Intermediate representations:
 
-- **Graphectory** (`*.graph.json`): nodes = distinct agent actions; edges = chronological execution order; includes node/edge/loop counts.
+- **Graphectory** (`graphs/*/{instance_id}.json`): nodes = distinct agent actions; edges = chronological execution order.
 - **Langutory** (`languatory.json`): per-instance phase sequence over the alphabet Φ = {N, R, P, V, …}, e.g. `NRRPVVVPV`, used by all compliance metrics.
 
 ---
