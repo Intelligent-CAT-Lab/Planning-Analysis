@@ -39,7 +39,12 @@ See [REQUIREMENTS](REQUIREMENTS.md) for details.
 
 ## Option A — Docker (recommended): One-Command Smoke Test + Full Reproduction
 
-Install Docker Engine (Linux) or Docker Desktop (macOS), start Docker, and verify that `docker --version` succeeds. Then, from the repository root, build the image and run the artifact with:
+Install and start Docker once:
+
+- **Ubuntu/Linux:** follow the official [Docker Engine installation guide](https://docs.docker.com/engine/install/ubuntu/), then start the Docker service if it is not already running.
+- **macOS:** follow the official [Docker Desktop installation guide](https://docs.docker.com/desktop/setup/install/mac-install/), then open Docker Desktop.
+
+Verify the installation with `docker --version` and `docker run --rm hello-world`. Then, from the repository root, build the image and run the artifact with:
 
 ```bash
 ./start_plan_study.sh
