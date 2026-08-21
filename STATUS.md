@@ -27,11 +27,12 @@ includes evidence of verification and validation:
   tests, and all plotting scripts).
 
 - **Exercisable.** A single command
-  (scripts/start_plan_study.sh) builds a self-contained Docker image
-  and runs the full pipeline end-to-end on the bundled data in
-  minutes, requiring no GPU, API keys, or network access. This script
-  serves as both the smoke test and the full reproduction, so
-  reviewers can exercise the entire artifact with one command.
+  (`./start_plan_study.sh`) builds a self-contained Docker image and
+  regenerates the paper figures from the bundled data in minutes,
+  requiring no GPU or API keys. After the image and its dependencies
+  are available, the analysis runs without network access. This script
+  serves as both the smoke test and the figure reproduction, so reviewers
+  can exercise the artifact with one command.
 
 - **Verification and validation.** All pre-computed results reported
   in the paper (compliance heatmaps, UpSet plots, Sankey diagrams,
@@ -46,12 +47,13 @@ Beyond reproducing the paper's results, the artifact is documented and
 structured to facilitate reuse and repurposing:
 
 - **One-command reproduction.** A single script
-  (scripts/start_plan_study.sh) builds a self-contained Docker image and
+  (`./start_plan_study.sh`) builds a self-contained Docker image and
   regenerates every figure in the paper (compliance heatmaps, UpSet
   plots, and phase-flow Sankey diagrams) from the bundled raw
   trajectories in minutes on a commodity laptop. This doubles as the
-  smoke test. No GPU, API keys, or network access is required at
-  runtime.
+  smoke test. No GPU or API keys are required; network access is needed
+  only for an initial Docker build that must download its base image and
+  Python packages.
 
 - **Reusable metric implementation.** The plan compliance metrics (PPC,
   POC, PPF, PC; Equations 1-4 in the paper) are implemented as an
@@ -59,7 +61,7 @@ structured to facilitate reuse and repurposing:
   SWE-agent trajectory, not only our dataset. All scripts expose a
   documented command-line interface (--help).
 
-- **Reusable dataset.** The 16,991 raw trajectories are shipped in a
+- **Reusable dataset.** The 21,120 raw trajectories are shipped in a
   documented JSON format (see README, "Data Schema"), together with
   their intermediate Graphectory and Langutory representations,
   enabling new analyses beyond plan compliance (e.g., trajectory
@@ -86,7 +88,7 @@ The artifact is permanently archived on Zenodo with DOI
 10.5281/zenodo.19339901, publicly accessible without registration, and
 released under the MIT license (see LICENSE). The Zenodo record contains
 the complete artifact: analysis code, SWE-agent plan configurations, all
-16,991 raw agent trajectories (~1.3 GB), and all pre-computed results
+21,120 raw agent trajectories (~1.3 GB), and all pre-computed results
 reported in the paper. Zenodo provides a declared plan for permanent
 accessibility of archived records. The DOI is included in the data
 availability statement at the end of the paper.

@@ -39,20 +39,20 @@ See [REQUIREMENTS](REQUIREMENTS.md) for details.
 
 ## Option A — Docker (recommended): One-Command Smoke Test + Full Reproduction
 
-The image is fully self-contained: code, configs, all 21,120 raw trajectories, and pre-computed results are baked in. Because the bundled dataset is compact (1.3 GB) and all analyses run in minutes, a **single command serves as both the smoke test and the full figure reproduction**:
+Install Docker Engine (Linux) or Docker Desktop (macOS), start Docker, and verify that `docker --version` succeeds. Then, from the repository root, build the image and run the artifact with:
 
 ```bash
-scripts/start_plan_study.sh
+./start_plan_study.sh
 ```
 
-This (1) builds the `plan-study` Docker image and (2) runs three containerized jobs that regenerate all compliance heatmaps, all UpSet plots, and all phase-flow (Sankey) diagrams from the bundled trajectory data.
+The image is fully self-contained: code, configs, all 21,120 raw trajectories, and pre-computed results are baked in. The command builds the `plan-study` image and runs three containerized jobs that regenerate all compliance heatmaps, UpSet plots, and phase-flow (Sankey) diagrams. No Docker knowledge beyond installing and starting it is required.
 
 **Expected output:** the script exits without error and figures are (re)written on the host under `artifacts/{BENCHMARK}/{SETTING}/`, e.g.:
 
 ```
 artifacts/SWE-Bench-Verified/no_reproduce/compliance_heatmap.pdf
 artifacts/SWE-Bench-Verified/no_reproduce/upset_plan_vs_no_reproduce.png
-artifacts/SWE-Bench-Verified/no_reproduce/deepseek_v3/lang/sa_dsk-v3_sankey.pdf
+artifacts/SWE-Bench-Verified/plan/deepseek_v3/lang/sankey_deepseek_v3.pdf
 ```
 
 Regenerated figures should match the pre-computed versions shipped in `artifacts/`.
@@ -156,7 +156,7 @@ The pipeline is not limited to the four models and eight settings analyzed in th
 
    This report supplies the resolution status used by the UpSet plots and success-rate comparisons.
 
-3. **Rerun the pipeline.** Re-run `scripts/start_plan_study.sh` (Docker) or the individual `scripts/plot_all_*.sh` scripts (local venv) as described in Part 1/Part 2 above. The graph/langutory construction and metric computation steps will pick up the new `{BENCHMARK}/{SETTING}/{MODEL}` combination automatically, and the corresponding heatmaps, UpSet plots, and Sankey diagrams will be (re)written under `artifacts/{BENCHMARK}/{SETTING}/`.
+3. **Rerun the pipeline.** Re-run `./start_plan_study.sh` (Docker) or the individual `scripts/plot_all_*.sh` scripts (local venv) as described in Part 1/Part 2 above. The graph/langutory construction and metric computation steps will pick up the new `{BENCHMARK}/{SETTING}/{MODEL}` combination automatically, and the corresponding heatmaps, UpSet plots, and Sankey diagrams will be (re)written under `artifacts/{BENCHMARK}/{SETTING}/`.
 
 > **Note:** A new `SETTING` should also have a matching config directory under `plan-settings/` describing its plan alphabet, since `compute_plan_compliance_scores.py` uses it to determine expected phases (PPC/POC/PPF).
 
@@ -217,10 +217,10 @@ All trajectories were generated with [**SWE-agent**](https://github.com/SWE-agen
 │   └── plan_hypothesis_test.py             Mann–Whitney / McNemar tests
 ├── artifacts/            Pre-computed results: all figures, stats, Langutory files
 ├── scripts/
-│   ├── start_plan_study.sh     Run on the HOST: builds the image and regenerates ALL figures
 │   ├── plot_all_heatmaps.sh    Run INSIDE the container (or venv): all compliance heatmaps
 │   ├── plot_all_upsets.sh      Run INSIDE the container (or venv): all UpSet plots
 │   └── plot_all_sankey.sh      Run INSIDE the container (or venv): all phase-flow diagrams
+├── start_plan_study.sh     Run on the HOST: builds the image and regenerates ALL figures
 ├── Dockerfile
 ├── REQUIREMENTS.md          Hardware/software requirements
 ├── STATUS.md                Badges requested + justification
